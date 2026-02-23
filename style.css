@@ -430,3 +430,33 @@ footer {
         line-height: 1.5; /* Dá um respiro elegante entre as duas linhas */
     }
 }
+/* --- BOTÃO DE IDIOMA NO MENU --- */
+.navbar {
+    display: flex;
+    justify-content: center; /* Mantém os links centralizados ou alinhados */
+    align-items: center;
+    position: relative; /* Necessário para posicionar o botão */
+}
+
+.lang-toggle {
+    position: absolute;
+    right: 5%; /* Fixa o botão no canto direito da tela */
+    cursor: pointer;
+    font-family: var(--fonte-corpo);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #888;
+}
+
+.lang-toggle span {
+    transition: color 0.3s ease;
+}
+
+.lang-toggle span.lang-active {
+    color: var(--cor-primaria);
+    font-weight: 700;
+}
+
+.lang-toggle span:not(.lang-active):hover {
+    color: var(--cor-detalhe); 
+}

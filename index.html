@@ -23,6 +23,10 @@
         <li><a href="#projetos" onclick="mostrarSecao('projetos', this)">Projetos</a></li>
         <li><a href="#trajetoria" onclick="mostrarSecao('trajetoria', this)">Trajetória</a></li>
       </ul>
+      <div class="lang-toggle" onclick="mudarIdioma()">
+        <span id="btn-pt" class="lang-active">PT</span> | <span id="btn-en">EN</span>
+      </div>
+    </nav>
     </nav>
 
     <header class="hero-section secao-conteudo ativa" id="home">
@@ -33,17 +37,18 @@
         <div class="hero-right-paper">
           <img src="fundo3.png" class="img-scrapbook-fundo" alt="Colagem" />
           <div class="paper-text-overlay">
-            <h1>Olá, eu sou a <strong>Mikaelly!</strong></h1>
-            
-            <h2>Analista de Dados &<br class="quebra-notebook"> Desenvolvedora de Software</h2>
-            
-            <p>Do código à inteligência de negócios. Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.</p>
-            <div class="paper-social-links">
-              <a href="https://linkedin.com/in/mikaelly-cardoso" target="_blank"><i class="fab fa-linkedin"></i></a>
-              <a href="https://github.com/mikaellycardoso" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="mailto:mikaellycardosodev@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-          </div>
+  <h1 data-i18n="saudacao">Olá, eu sou a <strong>Mikaelly!</strong></h1>
+  
+  <h2 data-i18n="cargo">Analista de Dados &<br class="quebra-notebook"> Desenvolvedora de Software</h2>
+  
+  <p data-i18n="resumo">Do código à inteligência de negócios. Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.</p>
+  
+  <div class="paper-social-links">
+    <a href="https://linkedin.com/in/mikaelly-cardoso" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/mikaellycardoso" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="mailto:mikaellycardosodev@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
+</div>
         </div>
       </div>
     </header>
@@ -298,6 +303,51 @@ function abrirModal(idProjeto) {
           lotusBaixo.style.bottom = '2%';
         }
       });
+      // O "Banco de Dados" das nossas traduções
+const textosIdioma = {
+    'pt': {
+        'menu-home': 'Home',
+        'menu-projetos': 'Projetos',
+        'menu-trajetoria': 'Trajetória',
+        
+        'saudacao': 'Olá, eu sou a <strong>Mikaelly!</strong>',
+        'cargo': 'Analista de Dados &<br class="quebra-notebook"> Desenvolvedora de Software',
+        'resumo': 'Do código à inteligência de negócios. Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.'
+    },
+    'en': {
+        'menu-home': 'Home',
+        'menu-projetos': 'Projects',
+        'menu-trajetoria': 'Journey',
+        
+        'saudacao': 'Hi, I am <strong>Mikaelly!</strong>',
+        'cargo': 'Data Analyst &<br class="quebra-notebook"> Software Developer',
+        'resumo': 'From code to business intelligence. Combining software development logic with data analysis to generate economic efficiency and social impact.'
+    }
+};
+
+let idiomaAtual = 'pt'; // O site sempre carrega em Português
+
+function mudarIdioma() {
+    // 1. Troca a variável de controle (Se for PT vira EN, se for EN vira PT)
+    idiomaAtual = idiomaAtual === 'pt' ? 'en' : 'pt';
+
+    // 2. Muda a cor do botão (negrito)
+    document.getElementById('btn-pt').classList.toggle('lang-active');
+    document.getElementById('btn-en').classList.toggle('lang-active');
+
+    // 3. A MÁGICA: Varre o HTML procurando os data-i18n
+    const elementosParaTraduzir = document.querySelectorAll('[data-i18n]');
+    
+    elementosParaTraduzir.forEach(elemento => {
+        // Pega o nome da chave (ex: 'saudacao', 'cargo')
+        const chave = elemento.getAttribute('data-i18n');
+        
+        // Se a chave existir no nosso dicionário, substitui o texto na tela
+        if (textosIdioma[idiomaAtual][chave]) {
+            elemento.innerHTML = textosIdioma[idiomaAtual][chave];
+        }
+    });
+}
     </script>
   </body>
 
