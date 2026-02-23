@@ -411,6 +411,7 @@ body {
 .sidebar-social-links a:hover {
     color: var(--cor-detalhe); /* Muda para rosa ao passar o mouse */
     transform: scale(1.2); /* Efeito de crescimento */
+
 }
 /* --- RODAPÉ (FOOTER) --- */
 footer {
