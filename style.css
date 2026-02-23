@@ -1,0 +1,414 @@
+/* --- GERAL --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --cor-primaria: #606C38; 
+    --cor-texto: #222D28;
+    --cor-detalhe: #E8C0C4;
+    --fonte-corpo: 'Inter', sans-serif;
+    --fonte-titulo: 'Playfair Display', serif;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    background-color: transparent; 
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* --- VÍDEO E LÓTUS FIXOS --- */
+.video-fundo {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    object-fit: cover; z-index: -10;
+}
+
+.lotus-topo, .lotus-baixo {
+    position: fixed; z-index: 5; animation: flutuar 6s infinite ease-in-out;
+    pointer-events: none;
+}
+.lotus-topo { top: 8%; right: 2%; width: 180px; }
+.lotus-baixo { bottom: 2%; left: 2%; width: 180px; animation-duration: 8s; }
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    position: fixed; top: 0; width: 100%; padding: 1rem;
+    background: rgba(34, 45, 40, 0.95); backdrop-filter: blur(10px);
+    z-index: 1000; display: flex; justify-content: center;
+}
+.nav-links { list-style: none; display: flex; gap: 3rem; }
+.nav-links a {
+    text-decoration: none; color: white; font-weight: 500; font-size: 0.85rem;
+    text-transform: uppercase; position: relative; letter-spacing: 2px; transition: 0.3s;
+}
+.nav-links a::after {
+    content: ''; position: absolute; width: 0; height: 2px; bottom: -5px;
+    left: 0; background-color: var(--cor-detalhe); transition: width 0.3s ease;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--cor-detalhe); }
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+/* --- HERO --- */
+.hero-section {
+    position: relative; height: 750px; display: flex; align-items: center;
+    justify-content: center; overflow: hidden; padding-top: 80px;
+}
+.hero-content {
+    display: flex; align-items: center; justify-content: center;
+    gap: clamp(2rem, 5vw, 6rem); width: 100%; max-width: 1900px; margin: 0 auto;
+}
+.hero-left-frame { flex: 1.2; max-width: 550px; filter: drop-shadow(15px 15px 25px rgba(0,0,0,0.4)); }
+.img-moldura { width: 100%; height: auto; display: block; }
+.hero-right-paper { flex: 3; position: relative; max-width: 1300px; }
+.img-scrapbook-fundo { width: 100%; height: auto; filter: drop-shadow(15px 15px 35px rgba(0,0,0,0.4)); }
+
+.paper-text-overlay {
+    position: absolute; top: 60%; left: 47%; transform: translate(-50%, -60%);
+    width: 60%; text-align: center;
+}
+.paper-text-overlay h1 { font-family: var(--fonte-titulo); font-size: clamp(1.6rem, 3vw, 2.5rem); margin-bottom: 0.8rem; }
+.paper-text-overlay h1 strong { color: var(--cor-primaria); }
+.paper-text-overlay p { font-size: clamp(0.75rem, 1.1vw, 1rem); color: #666; max-width: 450px; margin: 0 auto; }
+
+.paper-social-links { margin-top: 1.5rem; display: flex; gap: 2rem; justify-content: center; }
+.paper-social-links a { color: var(--cor-primaria); font-size: 1.8rem; transition: 0.3s; }
+.paper-social-links a:hover { color: var(--cor-detalhe); transform: scale(1.2); }
+
+/* --- PROJETOS --- */
+.secao-conteudo { display: none; padding-top: 100px; min-height: 100vh; }
+.secao-conteudo.ativa { display: block; }
+.container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+.container-projetos-relativo {
+    position: relative;
+}
+.projetos-wrapper-rosa {
+    background-color: hsla(354, 47%, 83%, 0.6); /* Rosa transparente (aumentei um pouco a opacidade para 0.6 para destacar mais) */
+    padding: 3rem 3rem 6rem 3rem;
+    border-radius: 25px; /* Bordas bem arredondadas */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* Uma sombra suave para destacar do fundo de água */
+    backdrop-filter: blur(5px); /* Um leve efeito de desfoque no fundo para ficar mais elegante */
+    position: relative;
+    overflow: visible;
+}
+
+#projetos .titulo-secao {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+/* NOVO ESTILO: Para a imagem decorativa lateral */
+.img-detalhe-lateral {
+    position: absolute;
+    /* VALORES NEGATIVOS: Empurram a imagem para fora da caixa rosa */
+    bottom: -50px; /* Ajuste este valor para descer mais ou menos */
+    right: -90px;  /* Ajuste este valor para ir mais para a direita */
+    
+    /* Tamanho da imagem decorativa */
+    width: 250px; 
+    height: auto;
+    
+    /* Z-INDEX ALTO: Garante que ela fique POR CIMA da borda rosa */
+    z-index: 10; 
+    
+    /* Opcional: uma leve inclinação para parecer mais natural */
+    transform: rotate(-5deg); 
+}
+
+/* .titulo-secao geral (mantido para referência) */
+.titulo-secao {
+    /* 1. Fonte Inter para manter a coesão com o menu */
+    font-family: var(--fonte-corpo); 
+    
+    /* 2. Tamanho reduzido para um visual mais equilibrado */
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem); 
+    
+    /* 3. Volta para o Verde Oliva */
+    color: var(--cor-primaria); 
+    
+    /* 4. Sombra mantida para destaque sobre o vídeo */
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+
+    /* Estilização técnica */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px; 
+    margin-bottom: 2.5rem;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+.grid-projetos { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem; 
+    position: relative; /* Necessário para o z-index funcionar */
+    z-index: 2; /* Coloca os cards em uma camada superior */
+}
+.card {
+    background: white; padding: 1.8rem; border-radius: 12px; cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.04); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 1px solid var(--cor-detalhe); }
+.card-img { background: var(--cor-detalhe); height: 160px; border-radius: 8px; margin-bottom: 1.2rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; }
+.tag { display: inline-block; background: #f4f4f4; padding: 4px 10px; border-radius: 15px; font-size: 0.7rem; color: var(--cor-primaria); margin-top: 10px; }
+
+/* --- MODAL --- */
+.modal-overlay {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(5px); z-index: 2000;
+    justify-content: center; align-items: center;
+}
+.modal-content {
+    background: white; width: 90%; max-width: 800px; max-height: 85vh;
+    border-radius: 20px; position: relative; padding: 3rem; overflow-y: auto;
+    animation: zoomIn 0.3s ease;
+}
+@keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.btn-fechar { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 2.5rem; color: var(--cor-primaria); cursor: pointer; }
+.btn-fechar:hover { color: var(--cor-detalhe); }
+.modal-info h2 { font-family: var(--fonte-titulo); color: var(--cor-primaria); margin-bottom: 1rem; }
+.modal-info img { width: 100%; border-radius: 10px; margin: 1.5rem 0; }
+.btn-github { display: inline-block; padding: 0.8rem 1.5rem; background: var(--cor-primaria); color: white; text-decoration: none; border-radius: 30px; font-weight: bold; }
+
+/* --- TRAJETÓRIA --- */
+/* --- TRAJETÓRIA --- */
+.trajetoria-container { 
+    display: flex; 
+    gap: 3rem; 
+    flex-wrap: wrap; 
+    align-items: flex-start; /* Evita que a barra lateral estique desnecessariamente */
+}
+
+/* Retângulo Branco Principal */
+.trajetoria-texto { 
+    flex: 2; 
+    min-width: 300px; 
+    background-color: rgba(255, 255, 255, 0.95); 
+    padding: 3rem; 
+    border-radius: 20px; 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+}
+
+/* Container dos 3 Balões */
+.baloes-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Estilo Individual de cada Balão */
+.balao-texto {
+    background-color: rgba(232, 192, 196, 0.15); /* Fundo rosa bem suave */
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--cor-detalhe); /* Linha rosa marcando o canto esquerdo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.balao-texto:hover {
+    transform: translateX(5px); /* Efeito sutil de mover para a direita ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.balao-texto h3 {
+    color: var(--cor-primaria);
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.balao-texto p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Barra Lateral (Badge) */
+/* Barra Lateral (Badge) */
+.trajetoria-badge { 
+    flex: 1; 
+    min-width: 280px;
+    background: white; 
+    padding: 2.5rem 2rem; 
+    border-radius: 20px; 
+    border-top: 5px solid var(--cor-primaria); 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    /* Garante que os botões fiquem no final se o card esticar */
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+}
+.img-detalhe-barra {
+    position: absolute; /* Posiciona em relação ao card pai */
+    bottom: -100px;      /* Empurra a imagem para fora da parte inferior. Ajuste esse valor se necessário. */
+    left: 50%;          /* Centraliza horizontalmente... */
+    transform: translateX(-50%); /* ...em conjunto com isso */
+    
+    width: 220px;       /* Ajuste o tamanho da sua imagem aqui */
+    height: auto;
+    
+    pointer-events: none; /* Garante que a imagem não atrapalhe o clique nos ícones sociais */
+    z-index: 1;           /* Garante que fique sobre a borda do card */
+}
+/* MUDANÇA DE FONTE: Título Principal */
+.badge-titulo {
+    font-family: var(--fonte-corpo); /* Usa a mesma fonte do menu (Inter) */
+    text-transform: uppercase; /* Letras maiúsculas como no menu */
+    letter-spacing: 2px; /* Espaçamento elegante */
+    font-weight: 700;
+    color: var(--cor-primaria);
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Categorias de Ferramentas */
+.categoria-ferramentas {
+    margin-bottom: 2rem;
+}
+
+/* MUDANÇA DE FONTE: Subtítulos */
+.categoria-ferramentas h4 {
+    font-family: var(--fonte-corpo); /* Usa a mesma fonte do menu (Inter) */
+    font-size: 0.9rem;
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.categoria-ferramentas ul {
+    list-style: none;
+}
+
+.categoria-ferramentas li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.4;
+}
+
+/* Setinhas customizadas para os itens da lista */
+.categoria-ferramentas li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: var(--cor-detalhe);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+/* Ajuste para fotos completas nos cards */
+.card-img-foto {
+    width: 100%;            /* Ocupa toda a largura disponível no card */
+    height: auto;           /* MUDANÇA: A altura se ajusta automaticamente à proporção da imagem original, sem cortar */
+    border-radius: 12px;    /* Mantém os cantos arredondados (aumentei um pouco para ficar mais suave) */
+    margin-bottom: 1.2rem;
+    display: block;
+    /* Adicionei uma sombra interna suave para destacar a imagem do fundo branco do card */
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05); 
+}
+/* Título com a fonte do Nav Bar */
+.modal-titulo-projeto {
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--cor-primaria);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Galeria Horizontal com Scroll */
+.modal-galeria-horizontal {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-detalhe) transparent;
+}
+
+.foto-galeria {
+    height: 200px;
+    width: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Seções de Texto */
+.modal-texto-secoes {
+    text-align: left;
+    margin-bottom: 4rem; /* Espaço para não bater nos ícones */
+}
+
+.secao-info {
+    margin-bottom: 1.5rem;
+}
+
+.secao-info strong {
+    display: block;
+    color: var(--cor-primaria);
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.secao-info p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Ícones no Canto Inferior Direito */
+.modal-social-footer {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.modal-social-footer a {
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    transition: 0.3s;
+}
+
+.modal-social-footer a:hover {
+    color: var(--cor-detalhe);
+    transform: translateY(-3px);
+}
+.sidebar-social-links {
+    margin-top: auto; /* Empurra para o final do container */
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    border-top: 1px solid #f0f0f0; /* Uma linha sutil para separar */
+}
+
+.sidebar-social-links a {
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.sidebar-social-links a:hover {
+    color: var(--cor-detalhe); /* Muda para rosa ao passar o mouse */
+    transform: scale(1.2); /* Efeito de crescimento */
+}
