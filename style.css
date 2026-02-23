@@ -413,3 +413,20 @@ footer {
     border-radius: 30px; /* Deixa o botão em formato de pílula */
     background-color: transparent;
 }
+/* --- CONTROLE DE QUEBRA DE LINHA DO SUBTÍTULO --- */
+
+/* 1. Esconde a quebra de linha em monitores grandes/Ultra-wide */
+.quebra-notebook {
+    display: none;
+}
+
+/* 2. Ativa a quebra de linha em notebooks (Aumentado para 1600px!) */
+@media (max-width: 1600px) {
+    .quebra-notebook {
+        display: initial; /* Força o navegador a ativar o <br> */
+    }
+    
+    .paper-text-overlay h2 {
+        line-height: 1.5; /* Dá um respiro elegante entre as duas linhas */
+    }
+}
