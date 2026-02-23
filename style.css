@@ -344,11 +344,12 @@ body {
 }
 
 .modal-social-footer {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
     display: flex;
+    justify-content: flex-end; /* Alinha os ícones à direita */
     gap: 1.5rem;
+    margin-top: 2rem; /* Dá uma margem segura do texto de "Tecnologia" */
+    padding-bottom: 1rem;
+    /* Removido o position: absolute para parar de sobrepor o texto! */
 }
 
 .modal-social-footer a {
@@ -393,4 +394,22 @@ footer {
     width: 100%;
     z-index: 100; 
     margin-top: auto;
+}
+/* --- SELO DE STATUS (EM DESENVOLVIMENTO) --- */
+.status-wrapper {
+    text-align: right; /* Empurra o selo para a direita com segurança */
+    margin-top: 10px;  /* Dá um respiro das fotos acima */
+    margin-bottom: 20px; /* Dá um respiro do texto abaixo */
+}
+
+.badge-status {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    color: #D35400; /* Laranja exato da sua referência */
+    font-family: var(--fonte-corpo);
+    font-size: 0.9rem;
+    font-weight: 500; /* Peso da fonte mais suave */
+    border: 1.5px solid #D35400;
+    border-radius: 30px; /* Deixa o botão em formato de pílula */
+    background-color: transparent;
 }

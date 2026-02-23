@@ -67,11 +67,11 @@
         </div>
 
         <div class="card" onclick="abrirModal('backpackers')">
-          <img src="backpackers.png" alt="Backpackers Mate" class="card-img-foto">
-          <h3>Backpackers Mate</h3>
-          <p>Organização financeira para viajantes mochileiros.</p>
-          <span class="tag">Mobile</span> <span class="tag">UI/UX</span>
-        </div>
+    <img src="backpackers.png" alt="Backpackers Mate" class="card-img-foto">
+    <h3>Backpackers Mate</h3>
+    <p>Navegação, economia e comunidade em um só ecossistema.</p>
+    <span class="tag">React Native</span> <span class="tag">TypeScript</span>
+</div>
       </div>
 
       <img src="detalhe-lateral.png" alt="Detalhe decorativo" class="img-detalhe-lateral">
@@ -181,6 +181,7 @@
     },
     'dashboard-rh': {
         titulo: 'HR Analytics Dashboard',
+        status: 'Em Desenvolvimento',
         descricao: 'Dashboard estratégico para gestão de pessoas.',
         problema: 'Dificuldade em visualizar taxas de turnover e custos de contratação de forma unificada.',
         tecnologia: 'Power BI, SQL Server, Oracle.',
@@ -190,15 +191,25 @@
         email: 'mailto:mikaellycardosodev@gmail.com'
     },
     'backpackers': {
-        titulo: 'Backpackers Mate',
-        descricao: 'App para planejamento financeiro de mochileiros.',
-        problema: 'Ajudar viajantes a controlarem gastos em diferentes moedas durante roteiros longos.',
-        tecnologia: 'React Native, Node.js, MongoDB.',
-        fotos: ['backpackers.png', 'mochilao-2.png', 'mochilao-3.png'],
-        github: 'https://github.com/mikaellycardoso/backpackers-mate',
+        titulo: 'Backpackers Mate: O Canivete Suíço do Viajante',
+        status: 'Em Desenvolvimento',
+        problema: 'Planejar um mochilão internacional é frequentemente um processo caótico. Viajantes precisam pular entre dezenas de aplicativos diferentes para converter moedas, reservar hostels, checar o clima e descobrir rotas de transporte. Além disso, informações críticas de segurança e necessidades específicas de cada região (como riscos climáticos ou golpes locais) muitas vezes passam despercebidas até que o viajante já esteja no destino.',
+        
+        solucao: 'O Backpackers Mate é um aplicativo B2C projetado para ser o hub central do viajante. Ele unifica funcionalidades essenciais: desde a recomendação de itens baseada no clima do destino (ex: capa de chuva para as monções na Tailândia), até um mapa colaborativo de caixas eletrônicos (ATMs) com taxas de câmbio atualizadas pela comunidade. A plataforma também centraliza a organização da semana, sugerindo rotas de transporte otimizadas e atividades fora do radar turístico, além de conectar "travel mates" com o mesmo destino.',
+        
+        papel: 'Unindo experiência prática de viagem à engenharia de software, atuei na concepção da arquitetura e no desenvolvimento mobile do produto. Meu maior desafio e diferencial foi estruturar um aplicativo cross-platform escalável, modelando a lógica de dados complexos — como armazenamento local de rotas e integração de mapas — e transformando-os em uma interface limpa, interativa e gamificada, garantindo que o usuário tenha acesso a informações críticas mesmo offline.',
+        
+        tecnologia: 'React Native e Expo (Desenvolvimento Mobile Cross-Platform), TypeScript, SQLite (Banco de dados local), Expo Router e React Navigation (Arquitetura de rotas), e React Native Reanimated (Animações e interações fluidas).',
+        
+        // Coloque aqui o nome exato dos seus arquivos dentro da pasta backpackers
+        fotos: [
+            'backpackers.png', 
+        ], 
+        
+        github: 'https://github.com/mikaellycardoso/backpackers-mate', // Ou link do Figma, se preferir
         linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
         email: 'mailto:mikaellycardosodev@gmail.com'
-    }
+    },
 };
 
       function mostrarSecao(idSecao, linkClicado) {
@@ -209,20 +220,26 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
 
-      function abrirModal(idProjeto) {
+function abrirModal(idProjeto) {
     const projeto = dadosProjetos[idProjeto];
     const modal = document.getElementById('modal-projeto');
     const body = document.getElementById('modal-body');
 
     const fotosHTML = projeto.fotos.map(f => `<img src="${f}" class="foto-galeria">`).join('');
+    
+    // NOVA LÓGICA: Envolve o selo no wrapper para alinhar à direita com segurança
+    const statusHTML = projeto.status ? `<div class="status-wrapper"><span class="badge-status">${projeto.status}</span></div>` : '';
 
     body.innerHTML = `
         <div class="modal-info-detalhada">
-            <h2 class="modal-titulo-projeto">${projeto.titulo}</h2>
+            
+            <h2 class="modal-titulo-projeto" style="margin-bottom: 1.5rem;">${projeto.titulo}</h2>
             
             <div class="modal-galeria-horizontal">
                 ${fotosHTML}
             </div>
+
+            ${statusHTML}
 
             <div class="modal-texto-secoes">
                 <div class="secao-info">
