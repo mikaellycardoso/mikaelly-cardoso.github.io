@@ -412,3 +412,17 @@ body {
     color: var(--cor-detalhe); /* Muda para rosa ao passar o mouse */
     transform: scale(1.2); /* Efeito de crescimento */
 }
+/* --- RODAPÉ (FOOTER) --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--cor-primaria); /* Traz de volta o fundo verde oliva */
+    color: white; /* Deixa o texto branco para dar contraste */
+    font-size: 0.9rem;
+    
+    /* Configurações de posicionamento para não sumir */
+    position: relative; 
+    width: 100%;
+    z-index: 100; /* Garante que a barra passe por cima do vídeo e da lótus inferior */
+    margin-top: auto;
+}
