@@ -53,11 +53,11 @@
       
       <div class="grid-projetos">
         <div class="card" onclick="abrirModal('safemind')">
-          <img src="safemind.png" alt="SafeMind" class="card-img-foto">
-          <h3>SafeMind</h3>
-          <p>IA para triagem de saúde focada em economia corporativa.</p>
-          <span class="tag">Produto</span> <span class="tag">IA</span>
-        </div>
+    <img src="safemind.png" alt="SafeMind" class="card-img-foto">
+    <h3>SafeMind</h3>
+    <p>IA para triagem de saúde focada em economia corporativa.</p>
+    <span class="tag">Produto</span> <span class="tag">IA</span>
+</div>
 
         <div class="card" onclick="abrirModal('dashboard-rh')">
           <div class="card-img">BI Analysis</div>
@@ -161,11 +161,20 @@
     <script>
       const dadosProjetos = {
     'safemind': {
-        titulo: 'SafeMind',
-        descricao: 'IA voltada para a triagem inteligente em ambientes corporativos.',
-        problema: 'Reduzir custos operacionais e otimizar o tempo de resposta em triagens de saúde.',
-        tecnologia: 'Python, TensorFlow, Integração com APIs de saúde.',
-        fotos: ['safemind.png', 'safemind-2.png', 'safemind-3.png'], // Adicione seus prints aqui
+        titulo: 'SafeMind: IA na Triagem de Saúde Mental',
+        problema: 'A saúde mental dos adolescentes é uma preocupação global crescente, marcada por subnotificação e diagnósticos tardios devido à resistência dos jovens em buscar ajuda presencial (por medo ou vergonha). Esse cenário crítico esbarra em um gargalo do sistema de saúde: a escassez de profissionais e a dificuldade de fazer uma triagem rápida que identifique a real urgência de cada paciente.',
+        solucao: 'O SafeMind foi idealizado como um sistema de triagem psicológica digital focado em instituições governamentais e planos de saúde. A plataforma utiliza Inteligência Artificial e Processamento de Linguagem Natural para analisar os sintomas relatados pelo adolescente e classificar o grau de risco. Com base nessa classificação, o aplicativo automatiza o encaminhamento: casos de emergência (como risco de suicídio) são direcionados imediatamente para psiquiatras de plantão, enquanto casos de menor risco são encaminhados para acompanhamento psicológico por videochamada.',
+        papel: 'Neste projeto, atuei diretamente na concepção estrutural e visual da plataforma, aplicando fundamentos rigorosos de Análise Orientada a Objetos e Engenharia de Software. Fui responsável por traduzir o problema em requisitos técnicos, modelagem de sistemas e casos de uso. Além da arquitetura lógica, liderei a criação do protótipo navegável no Figma, garantindo que a interface fosse responsiva, acessível e, acima de tudo, acolhedora e intuitiva para o público adolescente.',
+        tecnologia: 'Inteligência Artificial, Processamento de Linguagem Natural, Análise Orientada a Objetos, Engenharia de Software e Figma.',
+        fotos: [
+            'safemind/safemindvideo.gif', 
+            'safemind/sm1.png', 
+            'safemind/sm2.png', 
+            'safemind/sm3.png', 
+            'safemind/sm4.png', 
+            'safemind/sm5.png', 
+            'safemind/sm6.png'
+        ], 
         github: 'https://github.com/mikaellycardoso/safemind',
         linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
         email: 'mailto:mikaellycardosodev@gmail.com'
@@ -205,7 +214,6 @@
     const modal = document.getElementById('modal-projeto');
     const body = document.getElementById('modal-body');
 
-    // Cria a grade de fotos
     const fotosHTML = projeto.fotos.map(f => `<img src="${f}" class="foto-galeria">`).join('');
 
     body.innerHTML = `
@@ -218,13 +226,20 @@
 
             <div class="modal-texto-secoes">
                 <div class="secao-info">
-                    <strong><i class="fas fa-align-left"></i> Descrição</strong>
-                    <p>${projeto.descricao}</p>
-                </div>
-                <div class="secao-info">
-                    <strong><i class="fas fa-exclamation-circle"></i> Problemática</strong>
+                    <strong><i class="fas fa-exclamation-circle"></i> O Problema Real</strong>
                     <p>${projeto.problema}</p>
                 </div>
+
+                <div class="secao-info">
+                    <strong><i class="fas fa-lightbulb"></i> A Solução</strong>
+                    <p>${projeto.solucao}</p>
+                </div>
+
+                <div class="secao-info">
+                    <strong><i class="fas fa-user-gear"></i> Meu Papel e Diferencial Técnico</strong>
+                    <p>${projeto.papel}</p>
+                </div>
+
                 <div class="secao-info">
                     <strong><i class="fas fa-code"></i> Tecnologia usada</strong>
                     <p>${projeto.tecnologia}</p>
