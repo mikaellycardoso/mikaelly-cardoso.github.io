@@ -59,26 +59,31 @@
           <h2 class="titulo-secao">Estudos de Caso/Projetos</h2>
           
           <div class="grid-projetos">
+            
             <div class="card" onclick="abrirModal('safemind')">
               <img src="safemind.png" alt="SafeMind" class="card-img-foto">
-              <h3>SafeMind</h3>
-              <p>IA para triagem de saúde focada em economia corporativa.</p>
-              <span class="tag">Produto</span> <span class="tag">IA</span>
+              <h3>SafeMind: IA & Saúde Mental</h3>
+              <p>IA para triagem psicológica automatizada. Unindo engenharia de software e análise orientada a objetos para gerar impacto social no sistema de saúde.</p>
+              <span class="tag">IA</span> <span class="tag">Engenharia de Software</span> <span class="tag">UI/UX</span><span class="tag">Impacto Social</span>
             </div>
 
-            <div class="card" onclick="abrirModal('dashboard-rh')">
-              <div class="card-img">BI Analysis</div>
-              <h3>Dashboard de RH</h3>
-              <p>Análise de turnover e custos usando Power BI e SQL.</p>
-              <span class="tag">Power BI</span> <span class="tag">SQL</span>
+            <div class="card" onclick="abrirModal('gov-impacto')">
+              <div class="card-img">Analytics & BI</div>
+              <h3>Mini Data Warehouse: Governança & Impacto</h3>
+              <p>Pipeline ETL de ponta a ponta e modelagem de métricas públicas. Cruzando dados financeiros e indicadores sociais para decisões estratégicas.</p>
+              <span class="tag">Engenharia de Analytics</span> 
+              <span class="tag">Python & dbt</span> 
+              <span class="tag">SQL</span> 
+              <span class="tag">Power BI</span>
             </div>
 
             <div class="card" onclick="abrirModal('backpackers')">
               <img src="backpackers.png" alt="Backpackers Mate" class="card-img-foto">
               <h3>Backpackers Mate</h3>
-              <p>Navegação, economia e comunidade em um só ecossistema.</p>
-              <span class="tag">React Native</span> <span class="tag">TypeScript</span>
+              <p>Aplicativo B2C cross-platform com arquitetura escalável e banco de dados local. Centralizando logística, roteiros e economia offline para viajantes.</p>
+              <span class="tag">React Native & Expo</span> <span class="tag">TypeScript</span><span class="tag">SQLite (Local DB)</span><span class="tag">Mobile</span>
             </div>
+
           </div>
 
           <img src="detalhe-lateral.png" alt="Detalhe decorativo" class="img-detalhe-lateral">
@@ -214,17 +219,26 @@
         linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
         email: 'mailto:mikaellycardosodev@gmail.com'
     },
-    'dashboard-rh': {
-        titulo: 'HR Analytics Dashboard',
-        status: 'Em Desenvolvimento',
-        descricao: 'Dashboard estratégico para gestão de pessoas.',
-        problema: 'Dificuldade em visualizar taxas de turnover e custos de contratação de forma unificada.',
-        tecnologia: 'Power BI, SQL Server, Oracle.',
-        fotos: ['projeto-bi.jpg', 'bi-2.jpg'],
-        github: 'https://github.com/mikaellycardoso/hr-analytics',
-        linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
-        email: 'mailto:mikaellycardosodev@gmail.com'
-    },
+    'gov-impacto': {
+            titulo: 'Governança & Impacto: Mini DW de Indicadores Públicos',
+            status: 'Em Desenvolvimento',
+            
+            problema: 'Dados abertos governamentais (como os do IBGE ou do Portal da Transparência) são minas de ouro para entender a economia e a sociedade, mas geralmente são desestruturados, massivos e isolados. Sem um tratamento adequado, torna-se quase impossível cruzar informações financeiras (orçamentos) com indicadores de impacto social (educação, saúde e desenvolvimento), dificultando a auditoria e a tomada de decisão estratégica por parte de gestores e empresas focadas em ESG.',
+            
+            solucao: 'Desenvolvimento de um pipeline de dados de ponta a ponta focado em Engenharia de Analytics. O projeto realiza a extração automatizada de dados brutos de fontes públicas, transformando-os em um Mini Data Warehouse estruturado. A partir dessa base governada e modelada, foi construído um Dashboard Executivo que cruza o volume de investimentos financeiros com o retorno em desenvolvimento social daquela região, oferecendo métricas prontas para análise e auditoria visual.',
+            
+            /* Rascunhei este texto para preencher o vazio, destacando sua visão de negócios! */
+            papel: '-',
+            
+            tecnologia: 'Python (Extração e Limpeza via APIs/Arquivos), DuckDB / SQLite (Armazenamento local rápido), dbt + SQL (Modelagem de dados e transformações) e Power BI (Visualização Executiva e DAX).',
+            
+            // Mantive as fotos provisórias antigas. Depois você troca os nomes aqui!
+            fotos: ['projeto-bi.jpg', 'bi-2.jpg'], 
+            
+            github: 'https://github.com/mikaellycardoso/mini-dw-gov',
+            linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
+            email: 'mailto:mikaellycardosodev@gmail.com'
+        },
     'backpackers': {
         titulo: 'Backpackers Mate: O Canivete Suíço do Viajante',
         status: 'Em Desenvolvimento',
