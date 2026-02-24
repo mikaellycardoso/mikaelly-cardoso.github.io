@@ -19,14 +19,13 @@
 
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="#home" class="active" onclick="mostrarSecao('home', this)">Home</a></li>
-        <li><a href="#projetos" onclick="mostrarSecao('projetos', this)">Projetos</a></li>
-        <li><a href="#trajetoria" onclick="mostrarSecao('trajetoria', this)">Trajetória</a></li>
+        <li><a href="#home" class="active" onclick="mostrarSecao('home', this)" data-i18n="menu-home">Home</a></li>
+        <li><a href="#projetos" onclick="mostrarSecao('projetos', this)" data-i18n="menu-projetos">Projetos</a></li>
+        <li><a href="#trajetoria" onclick="mostrarSecao('trajetoria', this)" data-i18n="menu-trajetoria">Trajetória</a></li>
       </ul>
       <div class="lang-toggle" onclick="mudarIdioma()">
         <span id="btn-pt" class="lang-active">PT</span> | <span id="btn-en">EN</span>
       </div>
-    </nav>
     </nav>
 
     <header class="hero-section secao-conteudo ativa" id="home">
@@ -37,18 +36,18 @@
         <div class="hero-right-paper">
           <img src="fundo3.png" class="img-scrapbook-fundo" alt="Colagem" />
           <div class="paper-text-overlay">
-  <h1 data-i18n="saudacao">Olá, eu sou a <strong>Mikaelly!</strong></h1>
-  
-  <h2 data-i18n="cargo">Analista de Dados &<br class="quebra-notebook"> Desenvolvedora de Software</h2>
-  
-  <p data-i18n="resumo">Do código à inteligência de negócios. Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.</p>
-  
-  <div class="paper-social-links">
-    <a href="https://linkedin.com/in/mikaelly-cardoso" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/mikaellycardoso" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="mailto:mikaellycardosodev@gmail.com"><i class="fas fa-envelope"></i></a>
-  </div>
-</div>
+            <h1 data-i18n="saudacao">Olá, eu sou a <strong>Mikaelly!</strong></h1>
+            
+            <h2 data-i18n="cargo">Analista de Dados &<br class="quebra-notebook"> Desenvolvedora de Software</h2>
+            
+            <p data-i18n="resumo">Do código à inteligência de negócios. Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.</p>
+            
+            <div class="paper-social-links">
+              <a href="https://linkedin.com/in/mikaelly-cardoso" target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a href="https://github.com/mikaellycardoso" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="mailto:mikaellycardosodev@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -56,22 +55,22 @@
     <section id="projetos" class="secao-conteudo">
       <div class="container">
         <div class="projetos-wrapper-rosa">
-          <h2 class="titulo-secao">Estudos de Caso/Projetos</h2>
+          <h2 class="titulo-secao" data-i18n="tit-secao-projetos">Estudos de Caso/Projetos</h2>
           
           <div class="grid-projetos">
             
             <div class="card" onclick="abrirModal('safemind')">
               <img src="safemind.png" alt="SafeMind" class="card-img-foto">
-              <h3>SafeMind: IA & Saúde Mental</h3>
-              <p>IA para triagem psicológica automatizada. Unindo engenharia de software e análise orientada a objetos para gerar impacto social no sistema de saúde.</p>
-              <span class="tag">IA</span> <span class="tag">Engenharia de Software</span> <span class="tag">UI/UX</span><span class="tag">Impacto Social</span>
+              <h3 data-i18n="proj1-tit">SafeMind: IA & Saúde Mental</h3>
+              <p data-i18n="proj1-desc">IA para triagem psicológica automatizada. Unindo engenharia de software e análise orientada a objetos para gerar impacto social no sistema de saúde.</p>
+              <span class="tag">IA</span> <span class="tag" data-i18n="tag-es">Engenharia de Software</span> <span class="tag">UI/UX</span><span class="tag" data-i18n="tag-is">Impacto Social</span>
             </div>
 
             <div class="card" onclick="abrirModal('gov-impacto')">
               <div class="card-img">Analytics & BI</div>
-              <h3>Mini Data Warehouse: Governança & Impacto</h3>
-              <p>Pipeline ETL de ponta a ponta e modelagem de métricas públicas. Cruzando dados financeiros e indicadores sociais para decisões estratégicas.</p>
-              <span class="tag">Engenharia de Analytics</span> 
+              <h3 data-i18n="proj2-tit">Mini Data Warehouse: Governança & Impacto</h3>
+              <p data-i18n="proj2-desc">Pipeline ETL de ponta a ponta e modelagem de métricas públicas. Cruzando dados financeiros e indicadores sociais para decisões estratégicas.</p>
+              <span class="tag" data-i18n="tag-ea">Engenharia de Analytics</span> 
               <span class="tag">Python & dbt</span> 
               <span class="tag">SQL</span> 
               <span class="tag">Power BI</span>
@@ -80,14 +79,14 @@
             <div class="card" onclick="abrirModal('backpackers')">
               <img src="backpackers.png" alt="Backpackers Mate" class="card-img-foto">
               <h3>Backpackers Mate</h3>
-              <p>Aplicativo B2C cross-platform com arquitetura escalável e banco de dados local. Centralizando logística, roteiros e economia offline para viajantes.</p>
+              <p data-i18n="proj3-desc">Aplicativo B2C cross-platform com arquitetura escalável e banco de dados local. Centralizando logística, roteiros e economia offline para viajantes.</p>
               <span class="tag">React Native & Expo</span> <span class="tag">TypeScript</span><span class="tag">SQLite (Local DB)</span><span class="tag">Mobile</span>
             </div>
 
           </div>
 
           <img src="detalhe-lateral.png" alt="Detalhe decorativo" class="img-detalhe-lateral">
-</div>
+        </div>
       </div>
     </section>
 
@@ -97,11 +96,11 @@
         <div class="trajetoria-layout-duplo">
           
           <div class="trajetoria-texto conteudo-principal">
-            <h2 class="titulo-secao" style="margin-bottom: 2rem; text-align: left;">Sobre Mim</h2>
+            <h2 class="titulo-secao" style="margin-bottom: 2rem; text-align: left;" data-i18n="tit-sobre-mim">Sobre Mim</h2>
             <div class="baloes-wrapper" style="margin-top: 0;">
               <div class="balao-texto">
-                <h3>Do Código à Inteligência de Negócios</h3>
-                <p>Minha jornada na tecnologia começou na base da engenharia de software, estruturando códigos e aplicando metodologias ágeis. No entanto, rapidamente descobri que minha verdadeira paixão não é apenas construir o sistema, mas extrair a inteligência que os dados gerados por ele podem revelar. Hoje, atuo na interseção entre Programação e Data Analytics. Utilizo minha base em desenvolvimento para entender a arquitetura da informação e aplico Business Intelligence (BI), visualização de dados e conceitos de Inteligência Artificial para transformar dados brutos em histórias claras, painéis interativos e decisões de negócios com impacto financeiro e social real.</p>
+                <h3 data-i18n="sobre-tit">Do Código à Inteligência de Negócios</h3>
+                <p data-i18n="sobre-desc">Minha jornada na tecnologia começou na base da engenharia de software, estruturando códigos e aplicando metodologias ágeis. No entanto, rapidamente descobri que minha verdadeira paixão não é apenas construir o sistema, mas extrair a inteligência que os dados gerados por ele podem revelar. Hoje, atuo na interseção entre Programação e Data Analytics. Utilizo minha base em desenvolvimento para entender a arquitetura da informação e aplico Business Intelligence (BI), visualização de dados e conceitos de Inteligência Artificial para transformar dados brutos em histórias claras, painéis interativos e decisões de negócios com impacto financeiro e social real.</p>
               </div>
             </div>
 
@@ -127,7 +126,7 @@
                 </div>
                 
                 <div class="timeline-ponto ativo" id="ponto-2025" onclick="mudarAno('2025')">
-                  <span class="ano-label">2025 - Atual</span>
+                  <span class="ano-label" data-i18n="tl-2025-lbl">2025 - Atual</span>
                   <div class="bolinha"></div>
                 </div>
               </div>
@@ -147,25 +146,25 @@
               <h4><i class="fas fa-database"></i> <span data-i18n="cat-bancos">Linguagens & Bancos</span></h4>
               <ul>
                 <li>SQL (Oracle Database)</li>
-                <li>Python (Foco em Análise de Dados)</li>
-                <li>Java e JavaScript (React Native/Expo)</li>
+                <li data-i18n="pilares-py">Python (Foco em Análise de Dados)</li>
+                <li>Java & JavaScript (React Native/Expo)</li>
               </ul>
             </div>
 
             <div class="categoria-ferramentas">
               <h4><i class="fas fa-chart-pie"></i> <span data-i18n="cat-bi">BI & Metodologias</span></h4>
               <ul>
-                <li>Power BI e Modelagem de Dados</li>
-                <li>Scrum, Kanban, TDD e BDD</li>
+                <li data-i18n="pilares-pbi">Power BI e Modelagem de Dados</li>
+                <li>Scrum, Kanban, TDD & BDD</li>
               </ul>
             </div>
 
             <div class="categoria-ferramentas">
               <h4><i class="fas fa-globe"></i> <span data-i18n="cat-soft">Diferenciais & Soft Skills</span></h4>
               <ul>
-                <li>Inglês Avançado e Espanhol Avançado</li>
-                <li>Prototipagem de Produtos (Figma)</li>
-                <li>Visão voltada para Economia e Impacto Social</li>
+                <li data-i18n="pilares-idiomas">Inglês Avançado e Espanhol Avançado</li>
+                <li data-i18n="pilares-figma">Prototipagem de Produtos (Figma)</li>
+                <li data-i18n="pilares-visao">Visão voltada para Economia e Impacto Social</li>
               </ul>
             </div>
 
@@ -195,71 +194,98 @@
     </div>
 
     <footer>
-      <p>&copy; 2026 Mikaelly Cardoso. Todos os direitos reservados.</p>
+      <p data-i18n="footer-txt">&copy; 2026 Mikaelly Cardoso. Todos os direitos reservados.</p>
     </footer>
 
     <script>
+      // DADOS DOS PROJETOS (AGORA BILÍNGUES!)
       const dadosProjetos = {
-    'safemind': {
-        titulo: 'SafeMind: IA na Triagem de Saúde Mental',
-        problema: 'A saúde mental dos adolescentes é uma preocupação global crescente, marcada por subnotificação e diagnósticos tardios devido à resistência dos jovens em buscar ajuda presencial (por medo ou vergonha). Esse cenário crítico esbarra em um gargalo do sistema de saúde: a escassez de profissionais e a dificuldade de fazer uma triagem rápida que identifique a real urgência de cada paciente.',
-        solucao: 'O SafeMind foi idealizado como um sistema de triagem psicológica digital focado em instituições governamentais e planos de saúde. A plataforma utiliza Inteligência Artificial e Processamento de Linguagem Natural para analisar os sintomas relatados pelo adolescente e classificar o grau de risco. Com base nessa classificação, o aplicativo automatiza o encaminhamento: casos de emergência (como risco de suicídio) são direcionados imediatamente para psiquiatras de plantão, enquanto casos de menor risco são encaminhados para acompanhamento psicológico por videochamada.',
-        papel: 'Neste projeto, atuei diretamente na concepção estrutural e visual da plataforma, aplicando fundamentos rigorosos de Análise Orientada a Objetos e Engenharia de Software. Fui responsável por traduzir o problema em requisitos técnicos, modelagem de sistemas e casos de uso. Além da arquitetura lógica, liderei a criação do protótipo navegável no Figma, garantindo que a interface fosse responsiva, acessível e, acima de tudo, acolhedora e intuitiva para o público adolescente.',
-        tecnologia: 'Inteligência Artificial, Processamento de Linguagem Natural, Análise Orientada a Objetos, Engenharia de Software e Figma.',
-        fotos: [
-            'safemind/safemindvideo.gif', 
-            'safemind/sm1.png', 
-            'safemind/sm2.png', 
-            'safemind/sm3.png', 
-            'safemind/sm4.png', 
-            'safemind/sm5.png', 
-            'safemind/sm6.png'
-        ], 
-        github: 'https://github.com/mikaellycardoso/safemind',
-        linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
-        email: 'mailto:mikaellycardosodev@gmail.com'
-    },
-    'gov-impacto': {
-            titulo: 'Governança & Impacto: Mini DW de Indicadores Públicos',
-            status: 'Em Desenvolvimento',
-            
-            problema: 'Dados abertos governamentais (como os do IBGE ou do Portal da Transparência) são minas de ouro para entender a economia e a sociedade, mas geralmente são desestruturados, massivos e isolados. Sem um tratamento adequado, torna-se quase impossível cruzar informações financeiras (orçamentos) com indicadores de impacto social (educação, saúde e desenvolvimento), dificultando a auditoria e a tomada de decisão estratégica por parte de gestores e empresas focadas em ESG.',
-            
-            solucao: 'Desenvolvimento de um pipeline de dados de ponta a ponta focado em Engenharia de Analytics. O projeto realiza a extração automatizada de dados brutos de fontes públicas, transformando-os em um Mini Data Warehouse estruturado. A partir dessa base governada e modelada, foi construído um Dashboard Executivo que cruza o volume de investimentos financeiros com o retorno em desenvolvimento social daquela região, oferecendo métricas prontas para análise e auditoria visual.',
-            
-            /* Rascunhei este texto para preencher o vazio, destacando sua visão de negócios! */
-            papel: '-',
-            
-            tecnologia: 'Python (Extração e Limpeza via APIs/Arquivos), DuckDB / SQLite (Armazenamento local rápido), dbt + SQL (Modelagem de dados e transformações) e Power BI (Visualização Executiva e DAX).',
-            
-            // Mantive as fotos provisórias antigas. Depois você troca os nomes aqui!
+        'safemind': {
+            titulo: { 
+                pt: 'SafeMind: IA na Triagem de Saúde Mental', 
+                en: 'SafeMind: AI in Mental Health Triage' 
+            },
+            status: { pt: '', en: '' },
+            problema: { 
+                pt: 'A saúde mental dos adolescentes é uma preocupação global crescente, marcada por subnotificação e diagnósticos tardios devido à resistência dos jovens em buscar ajuda presencial (por medo ou vergonha). Esse cenário crítico esbarra em um gargalo do sistema de saúde: a escassez de profissionais e a dificuldade de fazer uma triagem rápida que identifique a real urgência de cada paciente.', 
+                en: 'Adolescent mental health is a growing global concern, marked by underreporting and delayed diagnoses due to youth resistance to seeking in-person help (out of fear or shame). This critical scenario hits a bottleneck in the healthcare system: the shortage of professionals and the difficulty of conducting a rapid triage to identify the real urgency of each patient.' 
+            },
+            solucao: { 
+                pt: 'O SafeMind foi idealizado como um sistema de triagem psicológica digital focado em instituições governamentais e planos de saúde. A plataforma utiliza Inteligência Artificial e Processamento de Linguagem Natural para analisar os sintomas relatados pelo adolescente e classificar o grau de risco. Com base nessa classificação, o aplicativo automatiza o encaminhamento: casos de emergência (como risco de suicídio) são direcionados imediatamente para psiquiatras de plantão, enquanto casos de menor risco são encaminhados para acompanhamento psicológico por videochamada.', 
+                en: 'SafeMind was designed as a digital psychological triage system focused on government institutions and health insurance plans. The platform uses Artificial Intelligence and Natural Language Processing to analyze symptoms reported by the teenager and classify the risk level. Based on this classification, the application automates routing: emergency cases (such as suicide risk) are immediately directed to on-call psychiatrists, while lower-risk cases are referred for psychological follow-up via video call.' 
+            },
+            papel: { 
+                pt: 'Neste projeto, atuei diretamente na concepção estrutural e visual da plataforma, aplicando fundamentos rigorosos de Análise Orientada a Objetos e Engenharia de Software. Fui responsável por traduzir o problema em requisitos técnicos, modelagem de sistemas e casos de uso. Além da arquitetura lógica, liderei a criação do protótipo navegável no Figma, garantindo que a interface fosse responsiva, acessível e, acima de tudo, acolhedora e intuitiva para o público adolescente.', 
+                en: 'In this project, I worked directly on the structural and visual conception of the platform, applying rigorous fundamentals of Object-Oriented Analysis and Software Engineering. I was responsible for translating the problem into technical requirements, system modeling, and use cases. Beyond the logical architecture, I led the creation of the navigable prototype in Figma, ensuring the interface was responsive, accessible, and above all, welcoming and intuitive for the adolescent audience.' 
+            },
+            tecnologia: { 
+                pt: 'Inteligência Artificial, Processamento de Linguagem Natural, Análise Orientada a Objetos, Engenharia de Software e Figma.', 
+                en: 'Artificial Intelligence, Natural Language Processing, Object-Oriented Analysis, Software Engineering, and Figma.' 
+            },
+            fotos: [
+                'safemind/safemindvideo.gif', 'safemind/sm1.png', 'safemind/sm2.png', 'safemind/sm3.png', 'safemind/sm4.png', 'safemind/sm5.png', 'safemind/sm6.png'
+            ], 
+            github: 'https://github.com/mikaellycardoso/safemind',
+            linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
+            email: 'mailto:mikaellycardosodev@gmail.com'
+        },
+        'gov-impacto': {
+            titulo: { 
+                pt: 'Governança & Impacto: Mini DW de Indicadores Públicos', 
+                en: 'Governance & Impact: Mini DW of Public Indicators' 
+            },
+            status: { pt: 'Em Desenvolvimento', en: 'In Development' },
+            problema: { 
+                pt: 'Dados abertos governamentais (como os do IBGE ou do Portal da Transparência) são minas de ouro para entender a economia e a sociedade, mas geralmente são desestruturados, massivos e isolados. Sem um tratamento adequado, torna-se quase impossível cruzar informações financeiras (orçamentos) com indicadores de impacto social (educação, saúde e desenvolvimento), dificultando a auditoria e a tomada de decisão estratégica por parte de gestores e empresas focadas em ESG.', 
+                en: 'Open government data (such as census data or transparency portals) are gold mines for understanding the economy and society, but they are generally unstructured, massive, and isolated. Without proper treatment, it becomes almost impossible to cross financial information (budgets) with social impact indicators (education, health, and development), hindering auditing and strategic decision-making by managers and ESG-focused companies.' 
+            },
+            solucao: { 
+                pt: 'Desenvolvimento de um pipeline de dados de ponta a ponta focado em Engenharia de Analytics. O projeto realiza a extração automatizada de dados brutos de fontes públicas, transformando-os em um Mini Data Warehouse estruturado. A partir dessa base governada e modelada, foi construído um Dashboard Executivo que cruza o volume de investimentos financeiros com o retorno em desenvolvimento social daquela região, oferecendo métricas prontas para análise e auditoria visual.', 
+                en: 'Development of an end-to-end data pipeline focused on Analytics Engineering. The project performs automated extraction of raw data from public sources, transforming them into a structured Mini Data Warehouse. From this governed and modeled base, an Executive Dashboard was built that crosses the volume of financial investments with the return in social development of that region, offering ready-to-use metrics for visual analysis and auditing.' 
+            },
+            papel: { 
+                pt: 'Atuei como Analytics Engineer, arquitetando todo o fluxo de ponta a ponta. Meu foco foi garantir a governança estrutural através da modelagem dimensional (Star Schema) com dbt e SQL, transformando bases governamentais caóticas em tabelas prontas para consumo. Além da orquestração em Python, apliquei minha visão macroeconômica para traduzir orçamentos cruzados em um storytelling visual de alto impacto no Power BI.', 
+                en: 'I acted as an Analytics Engineer, architecting the entire end-to-end flow. My focus was to ensure structural governance through dimensional modeling (Star Schema) with dbt and SQL, transforming chaotic government databases into ready-to-consume tables. Beyond orchestration in Python, I applied my macroeconomic vision to translate cross-referenced budgets into high-impact visual storytelling in Power BI.' 
+            },
+            tecnologia: { 
+                pt: 'Python (Extração e Limpeza via APIs/Arquivos), DuckDB / SQLite (Armazenamento local rápido), dbt + SQL (Modelagem de dados e transformações) e Power BI (Visualização Executiva e DAX).', 
+                en: 'Python (Extraction & Cleaning via APIs/Files), DuckDB / SQLite (Fast local storage), dbt + SQL (Data modeling and transformations), and Power BI (Executive Visualization and DAX).' 
+            },
             fotos: ['projeto-bi.jpg', 'bi-2.jpg'], 
-            
             github: 'https://github.com/mikaellycardoso/mini-dw-gov',
             linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
             email: 'mailto:mikaellycardosodev@gmail.com'
         },
-    'backpackers': {
-        titulo: 'Backpackers Mate: O Canivete Suíço do Viajante',
-        status: 'Em Desenvolvimento',
-        problema: 'Planejar um mochilão internacional é frequentemente um processo caótico. Viajantes precisam pular entre dezenas de aplicativos diferentes para converter moedas, reservar hostels, checar o clima e descobrir rotas de transporte. Além disso, informações críticas de segurança e necessidades específicas de cada região (como riscos climáticos ou golpes locais) muitas vezes passam despercebidas até que o viajante já esteja no destino.',
-        
-        solucao: 'O Backpackers Mate é um aplicativo B2C projetado para ser o hub central do viajante. Ele unifica funcionalidades essenciais: desde a recomendação de itens baseada no clima do destino (ex: capa de chuva para as monções na Tailândia), até um mapa colaborativo de caixas eletrônicos (ATMs) com taxas de câmbio atualizadas pela comunidade. A plataforma também centraliza a organização da semana, sugerindo rotas de transporte otimizadas e atividades fora do radar turístico, além de conectar "travel mates" com o mesmo destino.',
-        
-        papel: 'Unindo experiência prática de viagem à engenharia de software, atuei na concepção da arquitetura e no desenvolvimento mobile do produto. Meu maior desafio e diferencial foi estruturar um aplicativo cross-platform escalável, modelando a lógica de dados complexos — como armazenamento local de rotas e integração de mapas — e transformando-os em uma interface limpa, interativa e gamificada, garantindo que o usuário tenha acesso a informações críticas mesmo offline.',
-        
-        tecnologia: 'React Native e Expo (Desenvolvimento Mobile Cross-Platform), TypeScript, SQLite (Banco de dados local), Expo Router e React Navigation (Arquitetura de rotas), e React Native Reanimated (Animações e interações fluidas).',
-        
-        // Coloque aqui o nome exato dos seus arquivos dentro da pasta backpackers
-        fotos: [
-            'backpackers.png', 
-        ], 
-        
-        github: 'https://github.com/mikaellycardoso/backpackers-mate', // Ou link do Figma, se preferir
-        linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
-        email: 'mailto:mikaellycardosodev@gmail.com'
-    },
-};
+        'backpackers': {
+            titulo: { 
+                pt: 'Backpackers Mate: O Canivete Suíço do Viajante', 
+                en: 'Backpackers Mate: The Traveler\'s Swiss Army Knife' 
+            },
+            status: { pt: 'Em Desenvolvimento', en: 'In Development' },
+            problema: { 
+                pt: 'Planejar um mochilão internacional é frequentemente um processo caótico. Viajantes precisam pular entre dezenas de aplicativos diferentes para converter moedas, reservar hostels, checar o clima e descobrir rotas de transporte. Além disso, informações críticas de segurança e necessidades específicas de cada região (como riscos climáticos ou golpes locais) muitas vezes passam despercebidas até que o viajante já esteja no destino.', 
+                en: 'Planning an international backpacking trip is often a chaotic process. Travelers have to bounce between dozens of different apps to convert currencies, book hostels, check the weather, and discover transport routes. Furthermore, critical security information and specific needs for each region (such as climate risks or local scams) often go unnoticed until the traveler is already at the destination.' 
+            },
+            solucao: { 
+                pt: 'O Backpackers Mate é um aplicativo B2C projetado para ser o hub central do viajante. Ele unifica funcionalidades essenciais: desde a recomendação de itens baseada no clima do destino (ex: capa de chuva para as monções na Tailândia), até um mapa colaborativo de caixas eletrônicos (ATMs) com taxas de câmbio atualizadas pela comunidade. A plataforma também centraliza a organização da semana, sugerindo rotas de transporte otimizadas e atividades fora do radar turístico, além de conectar "travel mates" com o mesmo destino.', 
+                en: 'Backpackers Mate is a B2C application designed to be the traveler\'s central hub. It unifies essential features: from weather-based item recommendations (e.g., raincoats for the monsoon in Thailand) to a collaborative map of ATMs with exchange rates updated by the community. The platform also centralizes the week\'s organization, suggesting optimized transport routes and off-the-beaten-path activities, as well as connecting "travel mates" heading to the same destination.' 
+            },
+            papel: { 
+                pt: 'Unindo experiência prática de viagem à engenharia de software, atuei na concepção da arquitetura e no desenvolvimento mobile do produto. Meu maior desafio e diferencial foi estruturar um aplicativo cross-platform escalável, modelando a lógica de dados complexos — como armazenamento local de rotas e integração de mapas — e transformando-os em uma interface limpa, interativa e gamificada, garantindo que o usuário tenha acesso a informações críticas mesmo offline.', 
+                en: 'Combining practical travel experience with software engineering, I worked on the architecture conception and mobile development of the product. My greatest challenge and technical edge was structuring a scalable cross-platform application, modeling complex data logic—such as local route storage and map integration—and transforming them into a clean, interactive, and gamified interface, ensuring the user has access to critical information even offline.' 
+            },
+            tecnologia: { 
+                pt: 'React Native e Expo (Desenvolvimento Mobile Cross-Platform), TypeScript, SQLite (Banco de dados local), Expo Router e React Navigation (Arquitetura de rotas), e React Native Reanimated (Animações e interações fluidas).', 
+                en: 'React Native and Expo (Cross-Platform Mobile Development), TypeScript, SQLite (Local database), Expo Router and React Navigation (Routing architecture), and React Native Reanimated (Fluid animations and interactions).' 
+            },
+            fotos: [
+                'backpackers.png', 
+            ], 
+            github: 'https://github.com/mikaellycardoso/backpackers-mate',
+            linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
+            email: 'mailto:mikaellycardosodev@gmail.com'
+        },
+      };
 
       function mostrarSecao(idSecao, linkClicado) {
         document.querySelectorAll(".secao-conteudo").forEach(s => s.classList.remove("ativa"));
@@ -269,59 +295,64 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
 
-function abrirModal(idProjeto) {
-    const projeto = dadosProjetos[idProjeto];
-    const modal = document.getElementById('modal-projeto');
-    const body = document.getElementById('modal-body');
+      function abrirModal(idProjeto) {
+        const projeto = dadosProjetos[idProjeto];
+        const modal = document.getElementById('modal-projeto');
+        const body = document.getElementById('modal-body');
 
-    const fotosHTML = projeto.fotos.map(f => `<img src="${f}" class="foto-galeria">`).join('');
-    
-    // NOVA LÓGICA: Envolve o selo no wrapper para alinhar à direita com segurança
-    const statusHTML = projeto.status ? `<div class="status-wrapper"><span class="badge-status">${projeto.status}</span></div>` : '';
+        const fotosHTML = projeto.fotos.map(f => `<img src="${f}" class="foto-galeria">`).join('');
+        
+        const statusHTML = projeto.status[idiomaAtual] ? `<div class="status-wrapper"><span class="badge-status">${projeto.status[idiomaAtual]}</span></div>` : '';
 
-    body.innerHTML = `
-        <div class="modal-info-detalhada">
-            
-            <h2 class="modal-titulo-projeto" style="margin-bottom: 1.5rem;">${projeto.titulo}</h2>
-            
-            <div class="modal-galeria-horizontal">
-                ${fotosHTML}
+        // Títulos do Modal pegos do Dicionário para ficarem dinâmicos
+        const lblProb = textosIdioma[idiomaAtual]['modal-prob'];
+        const lblSol = textosIdioma[idiomaAtual]['modal-sol'];
+        const lblPapel = textosIdioma[idiomaAtual]['modal-papel'];
+        const lblTec = textosIdioma[idiomaAtual]['modal-tec'];
+
+        body.innerHTML = `
+            <div class="modal-info-detalhada">
+                
+                <h2 class="modal-titulo-projeto" style="margin-bottom: 1.5rem;">${projeto.titulo[idiomaAtual]}</h2>
+                
+                <div class="modal-galeria-horizontal">
+                    ${fotosHTML}
+                </div>
+
+                ${statusHTML}
+
+                <div class="modal-texto-secoes">
+                    <div class="secao-info">
+                        <strong><i class="fas fa-exclamation-circle"></i> ${lblProb}</strong>
+                        <p>${projeto.problema[idiomaAtual]}</p>
+                    </div>
+
+                    <div class="secao-info">
+                        <strong><i class="fas fa-lightbulb"></i> ${lblSol}</strong>
+                        <p>${projeto.solucao[idiomaAtual]}</p>
+                    </div>
+
+                    <div class="secao-info">
+                        <strong><i class="fas fa-user-gear"></i> ${lblPapel}</strong>
+                        <p>${projeto.papel[idiomaAtual]}</p>
+                    </div>
+
+                    <div class="secao-info">
+                        <strong><i class="fas fa-code"></i> ${lblTec}</strong>
+                        <p>${projeto.tecnologia[idiomaAtual]}</p>
+                    </div>
+                </div>
+
+                <div class="modal-social-footer">
+                    <a href="${projeto.github}" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="${projeto.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="${projeto.email}"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
+        `;
 
-            ${statusHTML}
-
-            <div class="modal-texto-secoes">
-                <div class="secao-info">
-                    <strong><i class="fas fa-exclamation-circle"></i> O Problema Real</strong>
-                    <p>${projeto.problema}</p>
-                </div>
-
-                <div class="secao-info">
-                    <strong><i class="fas fa-lightbulb"></i> A Solução</strong>
-                    <p>${projeto.solucao}</p>
-                </div>
-
-                <div class="secao-info">
-                    <strong><i class="fas fa-user-gear"></i> Meu Papel e Diferencial Técnico</strong>
-                    <p>${projeto.papel}</p>
-                </div>
-
-                <div class="secao-info">
-                    <strong><i class="fas fa-code"></i> Tecnologia usada</strong>
-                    <p>${projeto.tecnologia}</p>
-                </div>
-            </div>
-
-            <div class="modal-social-footer">
-                <a href="${projeto.github}" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="${projeto.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="${projeto.email}"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    `;
-
-    modal.style.display = 'flex';
-}
+        modal.style.display = 'flex';
+      }
 
       function fecharModal() {
         document.getElementById('modal-projeto').style.display = 'none';
@@ -345,60 +376,162 @@ function abrirModal(idProjeto) {
           lotusBaixo.style.bottom = '2%';
         }
       });
+
       // O "Banco de Dados" das nossas traduções
-const textosIdioma = {
-    'pt': {
-        'menu-home': 'Home',
-        'menu-projetos': 'Projetos',
-        'menu-trajetoria': 'Trajetória',
-        
-        'saudacao': 'Olá, eu sou a <strong>Mikaelly!</strong>',
-        'cargo': 'Analista de Dados &<br class="quebra-notebook"> Desenvolvedora de Software',
-        'resumo': 'Do código à inteligência de negócios. Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.'
-    },
-    'en': {
-        'menu-home': 'Home',
-        'menu-projetos': 'Projects',
-        'menu-trajetoria': 'Journey',
-        
-        'saudacao': 'Hi, I am <strong>Mikaelly!</strong>',
-        'cargo': 'Data Analyst &<br class="quebra-notebook"> Software Developer',
-        'resumo': 'From code to business intelligence. Combining software development logic with data analysis to generate economic efficiency and social impact.'
-    }
-};
-
-let idiomaAtual = 'pt'; // O site sempre carrega em Português
-
-function mudarIdioma() {
-    // 1. Troca a variável de controle (Se for PT vira EN, se for EN vira PT)
-    idiomaAtual = idiomaAtual === 'pt' ? 'en' : 'pt';
-
-    // 2. Muda a cor do botão (negrito)
-    document.getElementById('btn-pt').classList.toggle('lang-active');
-    document.getElementById('btn-en').classList.toggle('lang-active');
-
-    // 3. A MÁGICA: Varre o HTML procurando os data-i18n
-    const elementosParaTraduzir = document.querySelectorAll('[data-i18n]');
-    
-    elementosParaTraduzir.forEach(elemento => {
-        // Pega o nome da chave (ex: 'saudacao', 'cargo')
-        const chave = elemento.getAttribute('data-i18n');
-        
-        // Se a chave existir no nosso dicionário, substitui o texto na tela
-        if (textosIdioma[idiomaAtual][chave]) {
-            elemento.innerHTML = textosIdioma[idiomaAtual][chave];
+      const textosIdioma = {
+        'pt': {
+            'menu-home': 'Home',
+            'menu-projetos': 'Projetos',
+            'menu-trajetoria': 'Trajetória',
+            
+            'saudacao': 'Olá, eu sou a <strong>Mikaelly!</strong>',
+            'cargo': 'Analista de Dados &<br class="quebra-notebook"> Desenvolvedora de Software',
+            'resumo': 'Do código à inteligência de negócios. Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.',
+            
+            'tit-secao-projetos': 'Estudos de Caso/Projetos',
+            'proj1-tit': 'SafeMind: IA & Saúde Mental',
+            'proj1-desc': 'IA para triagem psicológica automatizada. Unindo engenharia de software e análise orientada a objetos para gerar impacto social no sistema de saúde.',
+            'tag-es': 'Engenharia de Software',
+            'tag-is': 'Impacto Social',
+            
+            'proj2-tit': 'Mini Data Warehouse: Governança & Impacto',
+            'proj2-desc': 'Pipeline ETL de ponta a ponta e modelagem de métricas públicas. Cruzando dados financeiros e indicadores sociais para decisões estratégicas.',
+            'tag-ea': 'Engenharia de Analytics',
+            
+            'proj3-desc': 'Aplicativo B2C cross-platform com arquitetura escalável e banco de dados local. Centralizando logística, roteiros e economia offline para viajantes.',
+            
+            'tit-sobre-mim': 'Sobre Mim',
+            'sobre-tit': 'Do Código à Inteligência de Negócios',
+            'sobre-desc': 'Minha jornada na tecnologia começou na base da engenharia de software, estruturando códigos e aplicando metodologias ágeis. No entanto, rapidamente descobri que minha verdadeira paixão não é apenas construir o sistema, mas extrair a inteligência que os dados gerados por ele podem revelar. Hoje, atuo na interseção entre Programação e Data Analytics. Utilizo minha base em desenvolvimento para entender a arquitetura da informação e aplico Business Intelligence (BI), visualização de dados e conceitos de Inteligência Artificial para transformar dados brutos em histórias claras, painéis interativos e decisões de negócios com impacto financeiro e social real.',
+            
+            'tit-resumo': '<i class="fas fa-id-card"></i> Meu Perfil em Resumo',
+            'lbl-cargo': 'Cargo atual:',
+            'txt-cargo': 'Estagiária de Desenvolvimento de Software - TRE-ES.',
+            'lbl-formacao': 'Formação:',
+            'txt-formacao': 'Sistemas de Informação (FAESA - Previsão de formação em 06/2028).',
+            'lbl-projetos': 'Tipo de projetos que desenvolvo:',
+            'txt-projetos': 'Dashboards executivos e modelagem de BI, aplicações mobile completas (cross-platform), e arquitetura de produtos digitais integrados com IA para soluções de impacto social e eficiência econômica.',
+            'lbl-diferencial': 'Diferencial profissional:',
+            'txt-diferencial': 'Visão macroeconômica e de negócios (Storytelling com dados); UX Design afiado para criar visualizações intuitivas; e facilidade de comunicação e adaptação multicultural (Inglês e Espanhol práticos, com vivência em voluntariado internacional).',
+            
+            'tit-linha': '<i class="fas fa-route"></i> Linha do Tempo da Carreira',
+            'tl-2025-lbl': '2025 - Atual',
+            
+            'tit-pilares': 'Minhas Ferramentas e Pilares',
+            'cat-bancos': 'Linguagens & Bancos',
+            'cat-bi': 'BI & Metodologias',
+            'cat-soft': 'Diferenciais & Soft Skills',
+            'pilares-py': 'Python (Foco em Análise de Dados)',
+            'pilares-pbi': 'Power BI e Modelagem de Dados',
+            'pilares-idiomas': 'Inglês Avançado e Espanhol Avançado',
+            'pilares-figma': 'Prototipagem de Produtos (Figma)',
+            'pilares-visao': 'Visão voltada para Economia e Impacto Social',
+            
+            'footer-txt': '&copy; 2026 Mikaelly Cardoso. Todos os direitos reservados.',
+            
+            'modal-prob': 'O Problema Real',
+            'modal-sol': 'A Solução',
+            'modal-papel': 'Meu Papel e Diferencial Técnico',
+            'modal-tec': 'Tecnologia usada'
+        },
+        'en': {
+            'menu-home': 'Home',
+            'menu-projetos': 'Projects',
+            'menu-trajetoria': 'Journey',
+            
+            'saudacao': 'Hi, I am <strong>Mikaelly!</strong>',
+            'cargo': 'Data Analyst &<br class="quebra-notebook"> Software Developer',
+            'resumo': 'From code to business intelligence. Combining software development logic with data analysis to generate economic efficiency and social impact.',
+            
+            'tit-secao-projetos': 'Case Studies & Projects',
+            'proj1-tit': 'SafeMind: AI & Mental Health',
+            'proj1-desc': 'AI for automated psychological screening. Bridging software engineering and object-oriented analysis to generate social impact in the healthcare system.',
+            'tag-es': 'Software Engineering',
+            'tag-is': 'Social Impact',
+            
+            'proj2-tit': 'Mini Data Warehouse: Governance & Impact',
+            'proj2-desc': 'End-to-end ETL pipeline and public metrics modeling. Crossing financial data and social indicators for strategic decisions.',
+            'tag-ea': 'Analytics Engineering',
+            
+            'proj3-desc': 'Cross-platform B2C app with scalable architecture and local database. Centralizing logistics, itineraries, and offline savings for travelers.',
+            
+            'tit-sobre-mim': 'About Me',
+            'sobre-tit': 'From Code to Business Intelligence',
+            'sobre-desc': 'My journey in technology started at the foundation of software engineering, structuring code and applying agile methodologies. However, I quickly discovered that my true passion isn\'t just building the system, but extracting the intelligence that the generated data can reveal. Today, I work at the intersection of Programming and Data Analytics. I use my development background to understand information architecture and apply Business Intelligence (BI), data visualization, and Artificial Intelligence concepts to transform raw data into clear stories, interactive dashboards, and business decisions with real financial and social impact.',
+            
+            'tit-resumo': '<i class="fas fa-id-card"></i> My Profile in Brief',
+            'lbl-cargo': 'Current Role:',
+            'txt-cargo': 'Software Development Intern - TRE-ES.',
+            'lbl-formacao': 'Education:',
+            'txt-formacao': 'Information Systems (FAESA - Expected graduation in 06/2028).',
+            'lbl-projetos': 'Type of projects I develop:',
+            'txt-projetos': 'Executive dashboards and BI modeling, full mobile applications (cross-platform), and digital product architecture integrated with AI for social impact and economic efficiency solutions.',
+            'lbl-diferencial': 'Professional Edge:',
+            'txt-diferencial': 'Macroeconomic and business vision (Data Storytelling); sharp UX Design for intuitive visualizations; and strong communication and multicultural adaptability (practical English and Spanish, with international volunteer experience).',
+            
+            'tit-linha': '<i class="fas fa-route"></i> Career Timeline',
+            'tl-2025-lbl': '2025 - Present',
+            
+            'tit-pilares': 'My Tools and Pillars',
+            'cat-bancos': 'Languages & Databases',
+            'cat-bi': 'BI & Methodologies',
+            'cat-soft': 'Differentiators & Soft Skills',
+            'pilares-py': 'Python (Data Analysis Focus)',
+            'pilares-pbi': 'Power BI and Data Modeling',
+            'pilares-idiomas': 'Advanced English and Advanced Spanish',
+            'pilares-figma': 'Product Prototyping (Figma)',
+            'pilares-visao': 'Vision focused on Economy and Social Impact',
+            
+            'footer-txt': '&copy; 2026 Mikaelly Cardoso. All rights reserved.',
+            
+            'modal-prob': 'The Real Problem',
+            'modal-sol': 'The Solution',
+            'modal-papel': 'My Role and Technical Edge',
+            'modal-tec': 'Technology Used'
         }
-    });
-}
-// Dados da Linha do Tempo
-const dadosLinhaDoTempo = {
+      };
+
+      let idiomaAtual = 'pt'; 
+
+      function mudarIdioma() {
+        idiomaAtual = idiomaAtual === 'pt' ? 'en' : 'pt';
+
+        document.getElementById('btn-pt').classList.toggle('lang-active');
+        document.getElementById('btn-en').classList.toggle('lang-active');
+
+        // Atualiza textos estáticos com data-i18n
+        const elementosParaTraduzir = document.querySelectorAll('[data-i18n]');
+        elementosParaTraduzir.forEach(elemento => {
+            const chave = elemento.getAttribute('data-i18n');
+            if (textosIdioma[idiomaAtual][chave]) {
+                elemento.innerHTML = textosIdioma[idiomaAtual][chave];
+            }
+        });
+
+        // Atualiza a Linha do Tempo ativa instantaneamente na troca de idioma
+        const pontoAtivo = document.querySelector('.timeline-ponto.ativo');
+        if(pontoAtivo) {
+            const anoAtivo = pontoAtivo.id.replace('ponto-', '');
+            document.getElementById('tl-titulo').innerText = dadosLinhaDoTempo[anoAtivo].titulo[idiomaAtual];
+            document.getElementById('tl-texto').innerText = dadosLinhaDoTempo[anoAtivo].texto[idiomaAtual];
+        }
+      }
+
+      // Dados da Linha do Tempo (AGORA BILÍNGUES!)
+      const dadosLinhaDoTempo = {
         '2024': {
-            titulo: '2024 | A Base',
-            texto: 'Início do bacharelado em Sistemas de Informação, construindo uma fundação sólida em algoritmos, estrutura de dados e desenvolvimento back-end.'
+            titulo: { pt: '2024 | A Base', en: '2024 | The Foundation' },
+            texto: { 
+                pt: 'Início do bacharelado em Sistemas de Informação, construindo uma fundação sólida em algoritmos, estrutura de dados e desenvolvimento back-end.', 
+                en: 'Start of the Information Systems bachelor\'s degree, building a solid foundation in algorithms, data structures, and back-end development.' 
+            }
         },
         '2025': {
-            titulo: '2025 – Atual | A Prática e a Transição',
-            texto: 'Início do estágio em Desenvolvimento de Software no TRE-ES, lidando com código em produção e metodologias ágeis em larga escala. Simultaneamente, consolidei minha transição para o universo dos dados, desenvolvendo arquiteturas independentes e projetos de Business Intelligence e IA voltados para a resolução de problemas reais.'
+            titulo: { pt: '2025 – Atual | A Prática e a Transição', en: '2025 – Present | Practice and Transition' },
+            texto: { 
+                pt: 'Início do estágio em Desenvolvimento de Software no TRE-ES, lidando com código em produção e metodologias ágeis em larga escala. Simultaneamente, consolidei minha transição para o universo dos dados, desenvolvendo arquiteturas independentes e projetos de Business Intelligence e IA voltados para a resolução de problemas reais.', 
+                en: 'Started the Software Development internship at TRE-ES, dealing with production code and large-scale agile methodologies. Simultaneously, I consolidated my transition to the data universe, developing independent architectures and Business Intelligence and AI projects aimed at solving real-world problems.' 
+            }
         }
       };
 
@@ -413,8 +546,9 @@ const dadosLinhaDoTempo = {
         caixaConteudo.style.opacity = 0; 
 
         setTimeout(() => {
-            document.getElementById('tl-titulo').innerText = dadosLinhaDoTempo[anoClicado].titulo;
-            document.getElementById('tl-texto').innerText = dadosLinhaDoTempo[anoClicado].texto;
+            // Puxa o texto de acordo com o idioma selecionado
+            document.getElementById('tl-titulo').innerText = dadosLinhaDoTempo[anoClicado].titulo[idiomaAtual];
+            document.getElementById('tl-texto').innerText = dadosLinhaDoTempo[anoClicado].texto[idiomaAtual];
             caixaConteudo.style.opacity = 1; 
         }, 200); 
       }
