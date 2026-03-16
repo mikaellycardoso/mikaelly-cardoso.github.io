@@ -1,4 +1,8 @@
 /* --- GERAL --- */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Evita que a navbar cubra o título da seção ao scrollar */
+}
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -80,8 +84,11 @@ body {
 .paper-social-links a:hover { color: var(--cor-detalhe); transform: scale(1.2); }
 
 /* --- PROJETOS --- */
-.secao-conteudo { display: none; padding-top: 100px; min-height: 100vh; }
-.secao-conteudo.ativa { display: block; }
+.secao-conteudo { 
+    display: block; /* Antes era none */
+    padding-top: 100px; 
+    min-height: 100vh; 
+}
 .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
 .container-projetos-relativo {
     position: relative;
