@@ -18,15 +18,15 @@
     <img src="lotus-rosa.png" class="lotus-baixo" alt="Lótus Rosa" />
 
     <nav class="navbar">
-  <ul class="nav-links">
-    <li><a href="#home" class="active" data-i18n="menu-home">Home</a></li>
-    <li><a href="#projetos" data-i18n="menu-projetos">Projetos</a></li>
-    <li><a href="#trajetoria" data-i18n="menu-trajetoria">Trajetória</a></li>
-  </ul>
-  <div class="lang-toggle" onclick="mudarIdioma()">
-    <span id="btn-pt" class="lang-active">PT</span> | <span id="btn-en">EN</span>
-  </div>
-</nav>
+      <ul class="nav-links">
+        <li><a href="#home" class="active" data-i18n="menu-home">Home</a></li>
+        <li><a href="#projetos" data-i18n="menu-projetos">Projetos</a></li>
+        <li><a href="#trajetoria" data-i18n="menu-trajetoria">Trajetória</a></li>
+      </ul>
+      <div class="lang-toggle" onclick="mudarIdioma()">
+        <span id="btn-pt" class="lang-active">PT</span> | <span id="btn-en">EN</span>
+      </div>
+    </nav>
 
     <header class="hero-section secao-conteudo ativa" id="home">
       <div class="hero-content">
@@ -38,9 +38,8 @@
           <div class="paper-text-overlay">
             <h1 data-i18n="saudacao">Olá, eu sou a <strong>Mikaelly!</strong></h1>
             
-            <h2 data-i18n="cargo">Analista de Dados &<br class="quebra-notebook"> Desenvolvedora de Software</h2>
-            
-            <p data-i18n="resumo">Do código à inteligência de negócios. Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.</p>
+<h2 data-i18n="cargo">Analista de Dados &<br> Desenvolvedora de Software</h2>            
+            <p data-i18n="resumo">Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.</p>
             
             <div class="paper-social-links">
               <a href="https://linkedin.com/in/mikaelly-cardoso" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -52,51 +51,84 @@
       </div>
     </header>
 
-    <section id="projetos" class="secao-conteudo">
+    <section id="projetos" class="secao-conteudo secao-projetos-nova">
       <div class="container">
-        <div class="projetos-wrapper-rosa">
-          <h2 class="titulo-secao" data-i18n="tit-secao-projetos">Estudos de Caso/Projetos</h2>
+        <div class="editorial-header">
+          <span class="overline">✦ PORTFÓLIO ✦</span>
+          <h2 class="titulo-editorial">Projetos</h2>
+          <div class="divider-editorial">
+            <span class="line"></span>
+            <span class="diamond">✦</span>
+            <span class="line"></span>
+          </div>
+        </div>
+
+        <div class="layout-projetos-container">
           
-          <div class="grid-projetos">
-            
-            <div class="card" onclick="abrirModal('safemind')">
-              <img src="safemind.png" alt="SafeMind" class="card-img-foto">
-              <h3 data-i18n="proj1-tit">SafeMind: IA & Saúde Mental</h3>
-              <p data-i18n="proj1-desc">IA para triagem psicológica automatizada. Unindo engenharia de software e análise orientada a objetos para gerar impacto social no sistema de saúde.</p>
-              <span class="tag">IA</span> <span class="tag" data-i18n="tag-es">Engenharia de Software</span> <span class="tag">UI/UX</span><span class="tag" data-i18n="tag-is">Impacto Social</span>
-            </div>
+          <div class="projeto-banner-col">
+            <div class="carousel-container">
+              
+              <div class="carousel-card">
+                <div class="carousel-img-wrapper">
+                  <img src="backpackers.png" alt="Capa do Projeto" id="carousel-img">
+                </div>
+                <div class="carousel-content">
+                  <h3 id="carousel-titulo">Backpackers Mate</h3>
+                  <p id="carousel-desc">Aplicativo B2C cross-platform com arquitetura escalável...</p>
+                  <button class="btn-detalhes" id="carousel-btn" onclick="abrirModal('backpackers')">Ver Detalhes</button>
+                </div>
+              </div>
 
-            <div class="card" onclick="abrirModal('gov-impacto')">
-              <div class="card-img">Analytics & BI</div>
-              <h3 data-i18n="proj2-tit">Mini Data Warehouse: Governança & Impacto</h3>
-              <p data-i18n="proj2-desc">Pipeline ETL de ponta a ponta e modelagem de métricas públicas. Cruzando dados financeiros e indicadores sociais para decisões estratégicas.</p>
-              <span class="tag" data-i18n="tag-ea">Engenharia de Analytics</span> 
-              <span class="tag">Python & dbt</span> 
-              <span class="tag">SQL</span> 
-              <span class="tag">Power BI</span>
-            </div>
+              <div class="carousel-controls" id="carousel-controles-ui">
+                <button class="control-btn" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-dots" id="carousel-dots"></div>
+                <button class="control-btn" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+              </div>
 
-            <div class="card" onclick="abrirModal('backpackers')">
-              <img src="backpackers.png" alt="Backpackers Mate" class="card-img-foto">
-              <h3>Backpackers Mate</h3>
-              <p data-i18n="proj3-desc">Aplicativo B2C cross-platform com arquitetura escalável e banco de dados local. Centralizando logística, roteiros e economia offline para viajantes.</p>
-              <span class="tag">React Native & Expo</span> <span class="tag">TypeScript</span><span class="tag">SQLite (Local DB)</span><span class="tag">Mobile</span>
             </div>
-
           </div>
 
-          <img src="detalhe-lateral.png" alt="Detalhe decorativo" class="img-detalhe-lateral">
-        </div>
+          <div class="projeto-controles-col">
+            <div class="categoria-box active" onclick="filtrarProjetos('dev', this)">
+              <div class="categoria-conteudo">
+                <h3>Desenvolvimento de Software</h3>
+                <p>Aplicações Mobile cross-platform e integrações de IA.</p>
+                <div class="categoria-tags">
+                  <span>React Native</span><span>TypeScript</span><span>SQLite</span><span>Figma</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="categoria-box" onclick="filtrarProjetos('dados', this)">
+              <div class="categoria-conteudo">
+                <h3>Dados & Analytics</h3>
+                <p>Dashboards, Pipeline ETL e Inteligência de Negócios.</p>
+                <div class="categoria-tags">
+                  <span>SQL</span><span>Python</span><span>Power BI</span><span>dbt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>      
+        <img src="detalhe-lateral.png" alt="Detalhe" class="tigre-decorativo">
       </div>
     </section>
 
     <section id="trajetoria" class="secao-conteudo">
       <div class="trajetoria-larga">
-        
+        <div class="editorial-header header-rosa">
+      <span class="overline">✦ <span data-i18n="menu-trajetoria">TRAJETÓRIA</span> ✦</span>
+      <h2 class="titulo-editorial" data-i18n="tit-sobre-mim">Sobre Mim</h2>
+      <div class="divider-editorial">
+        <span class="line"></span>
+        <span class="diamond">✦</span>
+        <span class="line"></span>
+      </div>
+    </div>
         <div class="trajetoria-layout-duplo">
           
           <div class="trajetoria-texto conteudo-principal">
-            <h2 class="titulo-secao" style="margin-bottom: 2rem; text-align: left;" data-i18n="tit-sobre-mim">Sobre Mim</h2>
             <div class="baloes-wrapper" style="margin-top: 0;">
               <div class="balao-texto">
                 <h3 data-i18n="sobre-tit">Do Código à Inteligência de Negócios</h3>
@@ -198,7 +230,7 @@
     </footer>
 
     <script>
-      // DADOS DOS PROJETOS (AGORA BILÍNGUES!)
+      // DADOS DOS PROJETOS PARA O MODAL
       const dadosProjetos = {
         'safemind': {
             titulo: { 
@@ -251,7 +283,7 @@
                 pt: 'Python (Extração e Limpeza via APIs/Arquivos), DuckDB / SQLite (Armazenamento local rápido), dbt + SQL (Modelagem de dados e transformações) e Power BI (Visualização Executiva e DAX).', 
                 en: 'Python (Extraction & Cleaning via APIs/Files), DuckDB / SQLite (Fast local storage), dbt + SQL (Data modeling and transformations), and Power BI (Executive Visualization and DAX).' 
             },
-            fotos: ['projeto-bi.jpg', 'bi-2.jpg'], 
+            fotos: [], 
             github: 'https://github.com/mikaellycardoso/mini-dw-gov',
             linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
             email: 'mailto:mikaellycardosodev@gmail.com'
@@ -285,49 +317,109 @@
             linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
             email: 'mailto:mikaellycardosodev@gmail.com'
         },
+        // Adicione este bloco dentro de dadosProjetos:
+'ilhas-calor': {
+    titulo: { 
+        pt: 'EcoAtlas: Inteligência Climática & ESG', 
+        en: 'EcoAtlas: Climate Intelligence & ESG' 
+    },
+    status: { pt: 'Em Desenvolvimento', en: 'In Development' },
+    problema: { 
+        pt: 'As decisões de planejamento urbano e infraestrutura frequentemente ignoram o impacto climático em nível micro. Embora existam dados abertos detalhados sobre a supressão vegetal (cortes de árvores autorizados pelo município) e registros históricos de temperatura (INMET), essas bases vivem em silos governamentais. Sem o cruzamento dessas informações geolocalizadas, o verdadeiro custo ambiental do desmatamento urbano fica invisível, dificultando a auditoria pública e mascarando a formação de perigosas "ilhas de calor" que afetam diretamente a qualidade de vida e a saúde da população local.', 
+        en: 'Urban planning and infrastructure decisions often ignore climate impact at the micro level. Although detailed open data exists on vegetation suppression (city-authorized tree cutting) and historical temperature records (INMET), these bases live in government silos. Without crossing this geolocalized information, the true environmental cost of urban deforestation remains invisible, hindering public auditing and masking the formation of dangerous "heat islands" that directly affect the quality of life and health of the local population.' 
+    },
+    solucao: { 
+        pt: 'Desenvolvimento de um projeto analítico de ponta a ponta focado em ESG e Smart Cities. O projeto realiza a extração, higienização e integração de séries históricas meteorológicas com registros administrativos municipais de Vitória. A partir desse cruzamento de dados estruturados, foi construído um Dashboard Geoespacial e Interativo. A ferramenta mapeia a capital, provando visualmente a correlação entre a perda de cobertura vegetal e os picos de temperatura por bairro, transformando dados climáticos brutos em um storytelling inquestionável e pronto para pautar políticas públicas sustentáveis.', 
+        en: 'Development of an end-to-end analytical project focused on ESG and Smart Cities. The project performs the extraction, sanitization, and integration of historical meteorological series with municipal administrative records in Vitória. From this cross-referencing of structured data, an Interactive Geospatial Dashboard was built. The tool maps the capital, visually proving the correlation between loss of vegetation cover and temperature peaks per neighborhood, transforming raw climate data into unquestionable storytelling ready to guide sustainable public policies.' 
+    },
+    papel: { 
+        pt: 'Atuei como Analista de Dados com foco em Analytics Engineering, orquestrando o fluxo desde a coleta até a visualização executiva. Meu maior desafio e foco foi garantir a consistência analítica ao unificar bases com granularidades totalmente diferentes (clima temporal versus geografia urbana). Além da limpeza rigorosa e tratamento de anomalias espaciais usando Python, apliquei minha visão analítica e de impacto social para traduzir números complexos em mapas de calor claros e acionáveis no Power BI, entregando inteligência de dados voltada para o bem-estar social.', 
+        en: 'I acted as a Data Analyst with a focus on Analytics Engineering, orchestrating the flow from collection to executive visualization. My biggest challenge and focus was ensuring analytical consistency when unifying bases with completely different granularities (temporal climate versus urban geography). In addition to rigorous cleaning and treatment of spatial anomalies using Python, I applied my analytical vision and social impact perspective to translate complex numbers into clear and actionable heat maps in Power BI, delivering data intelligence focused on social well-being.' 
+    },
+    tecnologia: { 
+        pt: 'Python (Pandas e Jupyter): Análise Exploratória (EDA), extração de dados abertos e limpeza de inconsistências. APIs e Fontes Abertas (INMET / IBGE): Coleta de dados climáticos e malha viária/espacial. SQL (DuckDB / SQLite): Estruturação rápida, armazenamento local e consultas cruzadas. Power BI: Visualização Geoespacial, Storytelling de Dados, Mapas de Calor e expressões DAX.', 
+        en: 'Python (Pandas and Jupyter): Exploratory Data Analysis (EDA), open data extraction, and inconsistency cleaning. APIs and Open Sources (INMET / IBGE): Climate data collection and road/spatial mesh. SQL (DuckDB / SQLite): Rapid structuring, local storage, and cross-queries. Power BI: Geospatial Visualization, Data Storytelling, Heat Maps, and DAX expressions.' 
+    },
+    fotos: [],
+    github: 'https://github.com/mikaellycardoso/EcoAtlas.git',
+    linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
+    email: 'mailto:mikaellycardosodev@gmail.com'
+},
+'tre-pac': {
+    titulo: { 
+        pt: 'Painel PAC: Automação & UX no TRE-ES', 
+        en: 'PAC Dashboard: Automation & UX at TRE-ES' 
+    },
+    status: { pt: 'Publicado', en: 'Published' },
+    problema: { 
+        pt: 'Todo início de ano, a equipe precisava atualizar manualmente os filtros e preparar o dashboard do Plano Anual de Contratações para o novo ciclo. Além do exaustivo trabalho operacional "por baixo dos panos", a interface sofria com sobrecarga cognitiva: exibindo excesso de informações simultâneas, tabelas densas e até anos futuros nos filtros que ainda nem existiam.', 
+        en: 'Every beginning of the year, the team had to manually update filters and prepare the Annual Hiring Plan dashboard for the new cycle. Besides the exhaustive operational work behind the scenes, the interface suffered from cognitive overload: displaying excessive simultaneous information, dense tables, and even future years in filters that did not yet exist.' 
+    },
+    solucao: { 
+        pt: 'Para resolver esse problema na raiz, uni conceitos de modelagem de dados com princípios de UX/UI, entregando uma solução escalável e focada na experiência da alta gestão. O painel agora é 100% autogerenciável e visualmente direto ao ponto, garantindo a transparência imediata dos recursos públicos em uma interface que facilita a rápida tomada de decisão.', 
+        en: 'To solve this problem at its root, I combined data modeling concepts with UX/UI principles, delivering a scalable solution focused on top management experience. The dashboard is now 100% self-managing and visually direct, ensuring immediate transparency of public resources in an interface that facilitates quick decision-making.' 
+    },
+    papel: { 
+        pt: 'Atuei na reestruturação técnica e visual completa. Criei lógicas de Inteligência Temporal em DAX (como YEAR(TODAY())) e filtros autônomos para eliminar a manutenção anual (hard-code). Na governança, apliquei funções BLANK() para ocultar anos futuros automaticamente. No front-end, reduzi a sobrecarga eliminando redundâncias visuais e migrei "paredes de texto" para pop-ups acionados por botões (Bookmarks), exibindo detalhes apenas quando necessário.', 
+        en: 'I worked on the complete technical and visual restructuring. I created Time Intelligence logic in DAX (such as YEAR(TODAY())) and autonomous filters to eliminate annual maintenance (hard-code). For data governance, I applied BLANK() functions to automatically hide future years. On the front-end, I reduced overload by eliminating visual redundancies and migrated "walls of text" to button-triggered pop-ups (Bookmarks), displaying details only when needed.' 
+    },
+    tecnologia: { 
+        pt: 'Power BI, DAX (Inteligência de Tempo e Governança de Dados), Modelagem Dimensional e UI/UX Design (Bookmarks e Pop-ups).', 
+        en: 'Power BI, DAX (Time Intelligence and Data Governance), Dimensional Modeling, and UI/UX Design (Bookmarks and Pop-ups).' 
+    },
+    fotos: [
+        'dashboards/painelcontratações.mp4', // Coloque seu vídeo em primeiro para ele rodar logo de cara!
+        'dashboards/painel1.png', 
+        'dashboards/painel2.png'
+    ], 
+    github: 'https://lnkd.in/dns77Pe4', // Usando o link do LinkedIn que você mandou
+    linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
+    email: 'mailto:mikaellycardosodev@gmail.com'
+},
       };
 
       // Lógica de Scroll Spy: Destaca o menu conforme o scroll
-const sections = document.querySelectorAll(".secao-conteudo");
-const navLinks = document.querySelectorAll(".nav-links a");
+      const sections = document.querySelectorAll(".secao-conteudo");
+      const navLinks = document.querySelectorAll(".nav-links a");
 
-const observerOptions = {
-  root: null,
-  threshold: 0.6, // Define que 60% da seção deve estar visível para ativar o link
-};
+      const observerOptions = {
+        root: null,
+        threshold: 0.6,
+      };
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const id = entry.target.getAttribute("id");
-      
-      // Remove classe ativa de todos e adiciona no atual
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${id}`) {
-          link.classList.add("active");
-        }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            navLinks.forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === `#${id}`) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach((section) => {
+        observer.observe(section);
       });
-    }
-  });
-}, observerOptions);
-
-sections.forEach((section) => {
-  observer.observe(section);
-});
-
-// Mantemos apenas a função de fechar modal e mudar idioma como estavam...
 
       function abrirModal(idProjeto) {
         const projeto = dadosProjetos[idProjeto];
         const modal = document.getElementById('modal-projeto');
         const body = document.getElementById('modal-body');
 
-        const fotosHTML = projeto.fotos.map(f => `<img src="${f}" class="foto-galeria">`).join('');
-        
+        // Nova lógica que detecta se é vídeo (.mp4) ou imagem (.jpg/.png)
+        const fotosHTML = projeto.fotos.map(f => {
+            if(f.endsWith('.mp4')) {
+                return `<video src="${f}" class="foto-galeria" autoplay loop muted playsinline style="object-fit: cover;"></video>`;
+            } else {
+                return `<img src="${f}" class="foto-galeria">`;
+            }
+        }).join('');
         const statusHTML = projeto.status[idiomaAtual] ? `<div class="status-wrapper"><span class="badge-status">${projeto.status[idiomaAtual]}</span></div>` : '';
 
-        // Títulos do Modal pegos do Dicionário para ficarem dinâmicos
         const lblProb = textosIdioma[idiomaAtual]['modal-prob'];
         const lblSol = textosIdioma[idiomaAtual]['modal-sol'];
         const lblPapel = textosIdioma[idiomaAtual]['modal-papel'];
@@ -335,37 +427,27 @@ sections.forEach((section) => {
 
         body.innerHTML = `
             <div class="modal-info-detalhada">
-                
                 <h2 class="modal-titulo-projeto" style="margin-bottom: 1.5rem;">${projeto.titulo[idiomaAtual]}</h2>
-                
-                <div class="modal-galeria-horizontal">
-                    ${fotosHTML}
-                </div>
-
+                <div class="modal-galeria-horizontal">${fotosHTML}</div>
                 ${statusHTML}
-
                 <div class="modal-texto-secoes">
                     <div class="secao-info">
                         <strong><i class="fas fa-exclamation-circle"></i> ${lblProb}</strong>
                         <p>${projeto.problema[idiomaAtual]}</p>
                     </div>
-
                     <div class="secao-info">
                         <strong><i class="fas fa-lightbulb"></i> ${lblSol}</strong>
                         <p>${projeto.solucao[idiomaAtual]}</p>
                     </div>
-
                     <div class="secao-info">
                         <strong><i class="fas fa-user-gear"></i> ${lblPapel}</strong>
                         <p>${projeto.papel[idiomaAtual]}</p>
                     </div>
-
                     <div class="secao-info">
                         <strong><i class="fas fa-code"></i> ${lblTec}</strong>
                         <p>${projeto.tecnologia[idiomaAtual]}</p>
                     </div>
                 </div>
-
                 <div class="modal-social-footer">
                     <a href="${projeto.github}" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="${projeto.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -373,7 +455,6 @@ sections.forEach((section) => {
                 </div>
             </div>
         `;
-
         modal.style.display = 'flex';
       }
 
@@ -386,47 +467,27 @@ sections.forEach((section) => {
         if (event.target == modal) fecharModal();
       };
 
-      // Lógica para a Lótus não bater no footer
-      window.addEventListener('scroll', function() {
-        const footer = document.querySelector('footer');
-        const lotusBaixo = document.querySelector('.lotus-baixo');
-        const footerTop = footer.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (footerTop < windowHeight) {
-          const sobreposicao = windowHeight - footerTop;
-          lotusBaixo.style.bottom = `calc(2% + ${sobreposicao}px)`;
-        } else {
-          lotusBaixo.style.bottom = '2%';
-        }
-      });
-
       // O "Banco de Dados" das nossas traduções
       const textosIdioma = {
         'pt': {
             'menu-home': 'Home',
             'menu-projetos': 'Projetos',
             'menu-trajetoria': 'Trajetória',
-            
             'saudacao': 'Olá, eu sou a <strong>Mikaelly!</strong>',
             'cargo': 'Analista de Dados &<br class="quebra-notebook"> Desenvolvedora de Software',
             'resumo': 'Do código à inteligência de negócios. Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.',
-            
             'tit-secao-projetos': 'Estudos de Caso/Projetos',
             'proj1-tit': 'SafeMind: IA & Saúde Mental',
             'proj1-desc': 'IA para triagem psicológica automatizada. Unindo engenharia de software e análise orientada a objetos para gerar impacto social no sistema de saúde.',
             'tag-es': 'Engenharia de Software',
             'tag-is': 'Impacto Social',
-            
             'proj2-tit': 'Mini Data Warehouse: Governança & Impacto',
             'proj2-desc': 'Pipeline ETL de ponta a ponta e modelagem de métricas públicas. Cruzando dados financeiros e indicadores sociais para decisões estratégicas.',
             'tag-ea': 'Engenharia de Analytics',
-            
             'proj3-desc': 'Aplicativo B2C cross-platform com arquitetura escalável e banco de dados local. Centralizando logística, roteiros e economia offline para viajantes.',
-            
             'tit-sobre-mim': 'Sobre Mim',
             'sobre-tit': 'Do Código à Inteligência de Negócios',
             'sobre-desc': 'Minha jornada na tecnologia começou na base da engenharia de software, estruturando códigos e aplicando metodologias ágeis. No entanto, rapidamente descobri que minha verdadeira paixão não é apenas construir o sistema, mas extrair a inteligência que os dados gerados por ele podem revelar. Hoje, atuo na interseção entre Programação e Data Analytics. Utilizo minha base em desenvolvimento para entender a arquitetura da informação e aplico Business Intelligence (BI), visualização de dados e conceitos de Inteligência Artificial para transformar dados brutos em histórias claras, painéis interativos e decisões de negócios com impacto financeiro e social real.',
-            
             'tit-resumo': '<i class="fas fa-id-card"></i> Meu Perfil em Resumo',
             'lbl-cargo': 'Cargo atual:',
             'txt-cargo': 'Estagiária de Desenvolvimento de Software - TRE-ES.',
@@ -436,10 +497,8 @@ sections.forEach((section) => {
             'txt-projetos': 'Dashboards executivos e modelagem de BI, aplicações mobile completas (cross-platform), e arquitetura de produtos digitais integrados com IA para soluções de impacto social e eficiência econômica.',
             'lbl-diferencial': 'Diferencial profissional:',
             'txt-diferencial': 'Visão macroeconômica e de negócios (Storytelling com dados); UX Design afiado para criar visualizações intuitivas; e facilidade de comunicação e adaptação multicultural (Inglês e Espanhol práticos, com vivência em voluntariado internacional).',
-            
             'tit-linha': '<i class="fas fa-route"></i> Linha do Tempo da Carreira',
             'tl-2025-lbl': '2025 - Atual',
-            
             'tit-pilares': 'Minhas Ferramentas e Pilares',
             'cat-bancos': 'Linguagens & Bancos',
             'cat-bi': 'BI & Metodologias',
@@ -449,9 +508,7 @@ sections.forEach((section) => {
             'pilares-idiomas': 'Inglês Avançado e Espanhol Avançado',
             'pilares-figma': 'Prototipagem de Produtos (Figma)',
             'pilares-visao': 'Visão voltada para Economia e Impacto Social',
-            
             'footer-txt': '&copy; 2026 Mikaelly Cardoso. Todos os direitos reservados.',
-            
             'modal-prob': 'O Problema Real',
             'modal-sol': 'A Solução',
             'modal-papel': 'Meu Papel e Diferencial Técnico',
@@ -461,27 +518,21 @@ sections.forEach((section) => {
             'menu-home': 'Home',
             'menu-projetos': 'Projects',
             'menu-trajetoria': 'Journey',
-            
             'saudacao': 'Hi, I am <strong>Mikaelly!</strong>',
             'cargo': 'Data Analyst &<br class="quebra-notebook"> Software Developer',
             'resumo': 'From code to business intelligence. Combining software development logic with data analysis to generate economic efficiency and social impact.',
-            
             'tit-secao-projetos': 'Case Studies & Projects',
             'proj1-tit': 'SafeMind: AI & Mental Health',
             'proj1-desc': 'AI for automated psychological screening. Bridging software engineering and object-oriented analysis to generate social impact in the healthcare system.',
             'tag-es': 'Software Engineering',
             'tag-is': 'Social Impact',
-            
             'proj2-tit': 'Mini Data Warehouse: Governance & Impact',
             'proj2-desc': 'End-to-end ETL pipeline and public metrics modeling. Crossing financial data and social indicators for strategic decisions.',
             'tag-ea': 'Analytics Engineering',
-            
             'proj3-desc': 'Cross-platform B2C app with scalable architecture and local database. Centralizing logistics, itineraries, and offline savings for travelers.',
-            
             'tit-sobre-mim': 'About Me',
             'sobre-tit': 'From Code to Business Intelligence',
             'sobre-desc': 'My journey in technology started at the foundation of software engineering, structuring code and applying agile methodologies. However, I quickly discovered that my true passion isn\'t just building the system, but extracting the intelligence that the generated data can reveal. Today, I work at the intersection of Programming and Data Analytics. I use my development background to understand information architecture and apply Business Intelligence (BI), data visualization, and Artificial Intelligence concepts to transform raw data into clear stories, interactive dashboards, and business decisions with real financial and social impact.',
-            
             'tit-resumo': '<i class="fas fa-id-card"></i> My Profile in Brief',
             'lbl-cargo': 'Current Role:',
             'txt-cargo': 'Software Development Intern - TRE-ES.',
@@ -491,10 +542,8 @@ sections.forEach((section) => {
             'txt-projetos': 'Executive dashboards and BI modeling, full mobile applications (cross-platform), and digital product architecture integrated with AI for social impact and economic efficiency solutions.',
             'lbl-diferencial': 'Professional Edge:',
             'txt-diferencial': 'Macroeconomic and business vision (Data Storytelling); sharp UX Design for intuitive visualizations; and strong communication and multicultural adaptability (practical English and Spanish, with international volunteer experience).',
-            
             'tit-linha': '<i class="fas fa-route"></i> Career Timeline',
             'tl-2025-lbl': '2025 - Present',
-            
             'tit-pilares': 'My Tools and Pillars',
             'cat-bancos': 'Languages & Databases',
             'cat-bi': 'BI & Methodologies',
@@ -504,9 +553,7 @@ sections.forEach((section) => {
             'pilares-idiomas': 'Advanced English and Advanced Spanish',
             'pilares-figma': 'Product Prototyping (Figma)',
             'pilares-visao': 'Vision focused on Economy and Social Impact',
-            
             'footer-txt': '&copy; 2026 Mikaelly Cardoso. All rights reserved.',
-            
             'modal-prob': 'The Real Problem',
             'modal-sol': 'The Solution',
             'modal-papel': 'My Role and Technical Edge',
@@ -522,7 +569,6 @@ sections.forEach((section) => {
         document.getElementById('btn-pt').classList.toggle('lang-active');
         document.getElementById('btn-en').classList.toggle('lang-active');
 
-        // Atualiza textos estáticos com data-i18n
         const elementosParaTraduzir = document.querySelectorAll('[data-i18n]');
         elementosParaTraduzir.forEach(elemento => {
             const chave = elemento.getAttribute('data-i18n');
@@ -531,16 +577,16 @@ sections.forEach((section) => {
             }
         });
 
-        // Atualiza a Linha do Tempo ativa instantaneamente na troca de idioma
         const pontoAtivo = document.querySelector('.timeline-ponto.ativo');
         if(pontoAtivo) {
             const anoAtivo = pontoAtivo.id.replace('ponto-', '');
             document.getElementById('tl-titulo').innerText = dadosLinhaDoTempo[anoAtivo].titulo[idiomaAtual];
             document.getElementById('tl-texto').innerText = dadosLinhaDoTempo[anoAtivo].texto[idiomaAtual];
         }
+        
+        renderizarCarrossel();
       }
 
-      // Dados da Linha do Tempo (AGORA BILÍNGUES!)
       const dadosLinhaDoTempo = {
         '2024': {
             titulo: { pt: '2024 | A Base', en: '2024 | The Foundation' },
@@ -569,12 +615,135 @@ sections.forEach((section) => {
         caixaConteudo.style.opacity = 0; 
 
         setTimeout(() => {
-            // Puxa o texto de acordo com o idioma selecionado
             document.getElementById('tl-titulo').innerText = dadosLinhaDoTempo[anoClicado].titulo[idiomaAtual];
             document.getElementById('tl-texto').innerText = dadosLinhaDoTempo[anoClicado].texto[idiomaAtual];
             caixaConteudo.style.opacity = 1; 
         }, 200); 
       }
+
+      // --- LÓGICA DO BANNER DINÂMICO (FILTRO + CARROSSEL) ---
+      const todosProjetos = [
+          {
+              id: 'backpackers',
+              categoria: 'dev',
+              img: 'backpackers/banner.png',
+              titulo: { pt: 'Backpackers Mate', en: 'Backpackers Mate' },
+              desc: {
+                  pt: 'Aplicativo B2C cross-platform com arquitetura escalável e banco de dados local. Centralizando logística, roteiros e economia offline para viajantes.',
+                  en: 'Cross-platform B2C app with scalable architecture and local database. Centralizing logistics, itineraries, and offline savings for travelers.'
+              }
+          },
+          {
+              id: 'safemind',
+              categoria: 'dev',
+              img: 'safemind/banner.png',
+              titulo: { pt: 'SafeMind: IA & Saúde Mental', en: 'SafeMind: AI & Mental Health' },
+              desc: {
+                  pt: 'IA para triagem psicológica automatizada. Unindo engenharia de software e análise orientada a objetos para gerar impacto social.',
+                  en: 'AI for automated psychological screening. Bridging software engineering and object-oriented analysis to generate social impact.'
+              }
+          },
+          
+          {
+    id: 'ilhas-calor',
+    categoria: 'dados',
+    img: 'atlasEco/mapa.png', // Sugestão de nome para a imagem da capa
+    titulo: { 
+        pt: 'EcoAtlas: Análise de Ilhas de Calor Urbano', 
+        en: 'EcoAtlas: Urban Heat Island Analysis' },
+    desc: {
+        pt: 'Cruzamento de dados meteorológicos e supressão vegetal para mapear o impacto ambiental e social do desmatamento urbano em Vitória.',
+        en: 'Cross-referencing meteorological data and vegetation suppression to map the environmental and social impact of urban deforestation in Vitória.'
+    }
+     },
+     {
+    id: 'tre-pac',
+    categoria: 'dados',
+    img: 'dashboards/painel2.png', // Coloque o nome da imagem de capa aqui
+    titulo: { 
+        pt: 'Painel PAC: Automação & UX no TRE-ES', 
+        en: 'PAC Dashboard: Automation & UX at TRE-ES' 
+    },
+    desc: {
+        pt: 'Fim do retrabalho manual: reestruturação completa de dados em DAX e redesign de interface para o painel público de contratações.',
+        en: 'End of manual rework: complete data restructuring in DAX and interface redesign for the public hiring dashboard.'
+    }
+},
+    {
+              id: 'gov-impacto',
+              categoria: 'dados',
+              img: 'gov-impacto/banner.jpg',
+              titulo: { pt: 'Mini DW: Governança & Impacto', en: 'Mini DW: Governance & Impact' },
+              desc: {
+                  pt: 'Pipeline ETL de ponta a ponta e modelagem de métricas públicas. Cruzando dados financeiros e indicadores sociais para decisões estratégicas.',
+                  en: 'End-to-end ETL pipeline and public metrics modeling. Crossing financial data and social indicators for strategic decisions.'
+              }
+          },
+          
+      ];
+
+      let categoriaAtual = 'dev';
+      let projetosFiltrados = [];
+      let slideAtual = 0;
+
+      function filtrarProjetos(categoriaSelecionada, elementoBotao) {
+          document.querySelectorAll('.categoria-box').forEach(b => b.classList.remove('active'));
+          if (elementoBotao) elementoBotao.classList.add('active');
+
+          categoriaAtual = categoriaSelecionada;
+          projetosFiltrados = todosProjetos.filter(p => p.categoria === categoriaSelecionada);
+          
+          slideAtual = 0;
+          renderizarCarrossel();
+      }
+
+      function renderizarCarrossel() {
+          if (projetosFiltrados.length === 0) return; 
+
+          const slide = projetosFiltrados[slideAtual];
+          
+          document.getElementById('carousel-img').src = slide.img;
+          document.getElementById('carousel-titulo').innerText = slide.titulo[idiomaAtual];
+          document.getElementById('carousel-desc').innerText = slide.desc[idiomaAtual];
+          document.getElementById('carousel-btn').setAttribute('onclick', `abrirModal('${slide.id}')`);
+
+          const dotsContainer = document.getElementById('carousel-dots');
+          const controlesUI = document.getElementById('carousel-controles-ui');
+          
+          dotsContainer.innerHTML = '';
+          
+          if (projetosFiltrados.length > 1) {
+              controlesUI.style.display = 'flex';
+              projetosFiltrados.forEach((_, index) => {
+                  const dot = document.createElement('div');
+                  dot.className = `dot ${index === slideAtual ? 'active' : ''}`;
+                  dot.onclick = () => irParaSlide(index);
+                  dotsContainer.appendChild(dot);
+              });
+          } else {
+              controlesUI.style.display = 'none';
+          }
+      }
+
+      function nextSlide() {
+          slideAtual = (slideAtual + 1) % projetosFiltrados.length;
+          renderizarCarrossel();
+      }
+
+      function prevSlide() {
+          slideAtual = (slideAtual - 1 + projetosFiltrados.length) % projetosFiltrados.length;
+          renderizarCarrossel();
+      }
+
+      function irParaSlide(index) {
+          slideAtual = index;
+          renderizarCarrossel();
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+          const btnDev = document.querySelector('.categoria-box.active');
+          filtrarProjetos('dev', btnDev);
+      });
     </script>
   </body>
 </html>
