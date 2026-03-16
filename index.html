@@ -287,13 +287,36 @@
         },
       };
 
-      function mostrarSecao(idSecao, linkClicado) {
-        document.querySelectorAll(".secao-conteudo").forEach(s => s.classList.remove("ativa"));
-        document.getElementById(idSecao).classList.add("ativa");
-        document.querySelectorAll(".nav-links a").forEach(l => l.classList.remove("active"));
-        linkClicado.classList.add("active");
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
+      // Lógica de Scroll Spy: Destaca o menu conforme o scroll
+const sections = document.querySelectorAll(".secao-conteudo");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+const observerOptions = {
+  root: null,
+  threshold: 0.6, // Define que 60% da seção deve estar visível para ativar o link
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute("id");
+      
+      // Remove classe ativa de todos e adiciona no atual
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${id}`) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+}, observerOptions);
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
+
+// Mantemos apenas a função de fechar modal e mudar idioma como estavam...
 
       function abrirModal(idProjeto) {
         const projeto = dadosProjetos[idProjeto];
