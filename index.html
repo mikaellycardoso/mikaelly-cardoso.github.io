@@ -320,27 +320,27 @@
         // Adicione este bloco dentro de dadosProjetos:
 'ilhas-calor': {
     titulo: { 
-        pt: 'EcoAtlas: Inteligência Climática & ESG', 
-        en: 'EcoAtlas: Climate Intelligence & ESG' 
+        pt: 'EcoAtlas: Inteligência de Dados Contra o Aquecimento Urbano', 
+        en: 'EcoAtlas: Data Intelligence Against Urban Warming' 
     },
-    status: { pt: 'Em Desenvolvimento', en: 'In Development' },
+    status: { pt: 'Concluído', en: 'Completed' },
     problema: { 
-        pt: 'As decisões de planejamento urbano e infraestrutura frequentemente ignoram o impacto climático em nível micro. Embora existam dados abertos detalhados sobre a supressão vegetal (cortes de árvores autorizados pelo município) e registros históricos de temperatura (INMET), essas bases vivem em silos governamentais. Sem o cruzamento dessas informações geolocalizadas, o verdadeiro custo ambiental do desmatamento urbano fica invisível, dificultando a auditoria pública e mascarando a formação de perigosas "ilhas de calor" que afetam diretamente a qualidade de vida e a saúde da população local.', 
-        en: 'Urban planning and infrastructure decisions often ignore climate impact at the micro level. Although detailed open data exists on vegetation suppression (city-authorized tree cutting) and historical temperature records (INMET), these bases live in government silos. Without crossing this geolocalized information, the true environmental cost of urban deforestation remains invisible, hindering public auditing and masking the formation of dangerous "heat islands" that directly affect the quality of life and health of the local population.' 
+        pt: 'A percepção de que as cidades estão ficando mais quentes não é apenas subjetiva; ela é um reflexo direto de como o planejamento urbano ignora o impacto climático em nível micro. Durante meus trajetos diários para a faculdade, notei o contraste: onde árvores eram removidas, o calor se tornava implacável. Embora existam dados abertos sobre supressão vegetal e registros históricos de temperatura (INMET), essas bases vivem em silos governamentais. Sem o cruzamento dessas informações, o verdadeiro custo ambiental do desmatamento urbano fica invisível, mascarando a formação de "ilhas de calor" que afetam a saúde e a qualidade de vida da população de Vitória.', 
+        en: 'The perception that cities are getting hotter is not just subjective; it is a direct reflection of how urban planning ignores climate impact at the micro level. During my daily commutes to college, I noticed the contrast: where trees were removed, the heat became relentless. Although there is open data on vegetation suppression and historical temperature records (INMET), these datasets live in government silos. Without crossing this information, the true environmental cost of urban deforestation remains invisible, masking the formation of "heat islands" that affect the health and quality of life of the population of Vitória.' 
     },
     solucao: { 
-        pt: 'Desenvolvimento de um projeto analítico de ponta a ponta focado em ESG e Smart Cities. O projeto realiza a extração, higienização e integração de séries históricas meteorológicas com registros administrativos municipais de Vitória. A partir desse cruzamento de dados estruturados, foi construído um Dashboard Geoespacial e Interativo. A ferramenta mapeia a capital, provando visualmente a correlação entre a perda de cobertura vegetal e os picos de temperatura por bairro, transformando dados climáticos brutos em um storytelling inquestionável e pronto para pautar políticas públicas sustentáveis.', 
-        en: 'Development of an end-to-end analytical project focused on ESG and Smart Cities. The project performs the extraction, sanitization, and integration of historical meteorological series with municipal administrative records in Vitória. From this cross-referencing of structured data, an Interactive Geospatial Dashboard was built. The tool maps the capital, visually proving the correlation between loss of vegetation cover and temperature peaks per neighborhood, transforming raw climate data into unquestionable storytelling ready to guide sustainable public policies.' 
+        pt: 'O EcoAtlas é um projeto analítico end-to-end que realiza a extração, higienização e integração de séries históricas meteorológicas com registros de cobertura vegetal. Mais do que um painel visual, a solução valida estatisticamente a relação entre a perda de vegetação e as anomalias térmicas. Através de um Dashboard Geoespacial e Interativo, transformamos dados climáticos brutos em um storytelling inquestionável, pronto para pautar políticas públicas sustentáveis e estratégias de resiliência urbana.', 
+        en: 'EcoAtlas is an end-to-end analytical project that extracts, cleans, and integrates historical meteorological series with vegetation cover records. More than a visual dashboard, the solution statistically validates the relationship between vegetation loss and thermal anomalies. Through an Interactive Geospatial Dashboard, we transformed raw climate data into unquestionable storytelling, ready to guide sustainable public policies and urban resilience strategies.' 
     },
     papel: { 
-        pt: 'Atuei como Analista de Dados com foco em Analytics Engineering, orquestrando o fluxo desde a coleta até a visualização executiva. Meu maior desafio e foco foi garantir a consistência analítica ao unificar bases com granularidades totalmente diferentes (clima temporal versus geografia urbana). Além da limpeza rigorosa e tratamento de anomalias espaciais usando Python, apliquei minha visão analítica e de impacto social para traduzir números complexos em mapas de calor claros e acionáveis no Power BI, entregando inteligência de dados voltada para o bem-estar social.', 
-        en: 'I acted as a Data Analyst with a focus on Analytics Engineering, orchestrating the flow from collection to executive visualization. My biggest challenge and focus was ensuring analytical consistency when unifying bases with completely different granularities (temporal climate versus urban geography). In addition to rigorous cleaning and treatment of spatial anomalies using Python, I applied my analytical vision and social impact perspective to translate complex numbers into clear and actionable heat maps in Power BI, delivering data intelligence focused on social well-being.' 
+        pt: 'Atuei como Analista de Dados com foco em Analytics Engineering, orquestrando o fluxo desde a coleta bruta até a visualização executiva. Meu maior desafio foi o Cross-granularity Mapping: garantir a consistência analítica ao unificar bases com granularidades distintas (clima diário vs. geografia urbana anual). Além da limpeza rigorosa e tratamento de anomalias com Python, apliquei rigor estatístico (Cálculo de P-valor e Correlação de Pearson) para garantir que as tendências apresentadas fossem matematicamente significativas, mitigando ruídos sazonais das estações do ano e entregando inteligência voltada para o bem-estar social.', 
+        en: 'I worked as a Data Analyst with a focus on Analytics Engineering, orchestrating the flow from raw data collection to executive visualization. My biggest challenge was Cross-granularity Mapping: ensuring analytical consistency when unifying databases with distinct granularities (daily climate vs. annual urban geography). In addition to rigorous cleaning and anomaly treatment with Python, I applied statistical rigor (P-value calculation and Pearson Correlation) to ensure that the trends presented were mathematically significant, mitigating seasonal noise and delivering intelligence focused for social well-being.' 
     },
     tecnologia: { 
-        pt: 'Python (Pandas e Jupyter): Análise Exploratória (EDA), extração de dados abertos e limpeza de inconsistências. APIs e Fontes Abertas (INMET / IBGE): Coleta de dados climáticos e malha viária/espacial. SQL (DuckDB / SQLite): Estruturação rápida, armazenamento local e consultas cruzadas. Power BI: Visualização Geoespacial, Storytelling de Dados, Mapas de Calor e expressões DAX.', 
-        en: 'Python (Pandas and Jupyter): Exploratory Data Analysis (EDA), open data extraction, and inconsistency cleaning. APIs and Open Sources (INMET / IBGE): Climate data collection and road/spatial mesh. SQL (DuckDB / SQLite): Rapid structuring, local storage, and cross-queries. Power BI: Geospatial Visualization, Data Storytelling, Heat Maps, and DAX expressions.' 
+        pt: '<strong>Python (Pandas, Seaborn & SciPy):</strong> EDA, tratamento de nulos, merging e validação de hipóteses.<br><strong>Estatística Aplicada:</strong> Testes de significância e Correlação de Pearson.<br><strong>APIs e Open Data:</strong> INMET / MapBiomas.<br><strong>Power BI & DAX:</strong> Visualização Geoespacial (Shape Maps), Storytelling e UX.<br><strong>Git/GitHub:</strong> Versionamento e documentação.<br><br><em>Nota técnica: O projeto utiliza o último ciclo de dados consolidados disponíveis (2021-2024), respeitando o tempo de processamento e publicação oficial das fontes governamentais citadas.</em>', 
+        en: '<strong>Python (Pandas, Seaborn & SciPy):</strong> EDA, null treatment, merging, and hypothesis validation.<br><strong>Applied Statistics:</strong> Significance tests and Pearson Correlation.<br><strong>APIs and Open Data:</strong> INMET / MapBiomas.<br><strong>Power BI & DAX:</strong> Geospatial Visualization (Shape Maps), Storytelling, and UX.<br><strong>Git/GitHub:</strong> Version control and documentation.<br><br><em>Technical note: The project uses the latest cycle of consolidated data available (2021-2024), respecting the processing and official publication time of the cited government sources.</em>' 
     },
-    fotos: [],
+    fotos: ['atlasEco/dashboard.png', 'atlasEco/output.png'], // Atualize com as imagens mais recentes do seu dash
     github: 'https://github.com/mikaellycardoso/EcoAtlas.git',
     linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
     email: 'mailto:mikaellycardosodev@gmail.com'
@@ -645,17 +645,18 @@
           },
           
           {
-    id: 'ilhas-calor',
+    id: 'ilhas-calor', // Mantemos o mesmo ID para não quebrar seus links
     categoria: 'dados',
-    img: 'atlasEco/mapa.png', // Sugestão de nome para a imagem da capa
+    img: 'atlasEco/banner.png', // Lembre-se de checar o nome exato da sua imagem
     titulo: { 
-        pt: 'EcoAtlas: Análise de Ilhas de Calor Urbano', 
-        en: 'EcoAtlas: Urban Heat Island Analysis' },
+        pt: 'EcoAtlas: Inteligência de Dados Contra o Aquecimento Urbano', 
+        en: 'EcoAtlas: Data Intelligence Against Urban Warming' 
+    },
     desc: {
-        pt: 'Cruzamento de dados meteorológicos e supressão vegetal para mapear o impacto ambiental e social do desmatamento urbano em Vitória.',
-        en: 'Cross-referencing meteorological data and vegetation suppression to map the environmental and social impact of urban deforestation in Vitória.'
+        pt: 'Projeto analítico end-to-end que valida estatisticamente a relação entre o desmatamento urbano e a formação de ilhas de calor em Vitória.',
+        en: 'End-to-end analytical project that statistically validates the relationship between urban deforestation and the formation of heat islands in Vitória.'
     }
-     },
+},
      {
     id: 'tre-pac',
     categoria: 'dados',
