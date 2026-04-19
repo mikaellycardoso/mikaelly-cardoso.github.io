@@ -21,6 +21,7 @@
       <ul class="nav-links">
         <li><a href="#home" class="active" data-i18n="menu-home">Home</a></li>
         <li><a href="#projetos" data-i18n="menu-projetos">Projetos</a></li>
+        <li><a href="#pesquisa" data-i18n="menu-pesquisa">Pesquisa</a></li>
         <li><a href="#trajetoria" data-i18n="menu-trajetoria">Trajetória</a></li>
       </ul>
       <div class="lang-toggle" onclick="mudarIdioma()">
@@ -38,12 +39,13 @@
           <div class="paper-text-overlay">
             <h1 data-i18n="saudacao">Olá, eu sou a <strong>Mikaelly!</strong></h1>
             
-<h2 data-i18n="cargo">Analista de Dados &<br> Desenvolvedora de Software</h2>            
-            <p data-i18n="resumo">Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.</p>
+<h2 data-i18n="cargo">AI & ML Researcher<br> Accessibility & Social Impact</h2>            
+            <p data-i18n="resumo">Pesquisadora em formação na interseção entre Inteligência Artificial, acessibilidade digital e saúde pública. Construindo soluções que colocam as pessoas no centro da tecnologia.</p>
             
             <div class="paper-social-links">
               <a href="https://linkedin.com/in/mikaelly-cardoso" target="_blank"><i class="fab fa-linkedin"></i></a>
               <a href="https://github.com/mikaellycardoso" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="http://lattes.cnpq.br/6340388262242435" target="_blank" title="Currículo Lattes"><i class="fas fa-graduation-cap"></i></a>
               <a href="mailto:mikaellycardosodev@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
           </div>
@@ -115,6 +117,65 @@
       </div>
     </section>
 
+    <section id="pesquisa" class="secao-conteudo secao-pesquisa">
+      <div class="container">
+        <div class="editorial-header">
+          <span class="overline">✦ <span data-i18n="menu-pesquisa">PESQUISA</span> ✦</span>
+          <h2 class="titulo-editorial" data-i18n="tit-pesquisa">Iniciação Científica</h2>
+          <div class="divider-editorial">
+            <span class="line"></span><span class="diamond">✦</span><span class="line"></span>
+          </div>
+        </div>
+
+        <div class="research-card-principal">
+          <div class="research-badge" data-i18n="badge-andamento">Em Andamento</div>
+          <div class="research-header">
+            <h3 data-i18n="gd-titulo">A Guardiã Digital</h3>
+            <p class="research-subtitulo" data-i18n="gd-subtitulo">Sistema de Machine Learning para Inclusão Digital de Idosos</p>
+          </div>
+          <div class="research-body">
+            <div class="research-col">
+              <h4><i class="fas fa-exclamation-circle"></i> <span data-i18n="research-problema">O Problema</span></h4>
+              <p data-i18n="gd-problema">O minimalismo excessivo nos aplicativos modernos exclui digitalmente milhões de idosos. Interfaces projetadas sem considerar as especificidades dessa faixa etária geram frustração invisível — e nenhum sistema atual detecta esse problema em tempo real.</p>
+            </div>
+            <div class="research-col">
+              <h4><i class="fas fa-lightbulb"></i> <span data-i18n="research-solucao">A Solução</span></h4>
+              <p data-i18n="gd-solucao">Um agente inteligente integrado aos Serviços de Acessibilidade do Android que captura eventos de toque (coordenadas X/Y, latência, taxa de erro) e aplica algoritmos de classificação — SVM e Random Forest — para detectar padrões de frustração em tempo real, sem interação do usuário.</p>
+            </div>
+            <div class="research-col">
+              <h4><i class="fas fa-code"></i> Stack</h4>
+              <div class="research-tags">
+                <span>Python</span><span>Scikit-learn</span><span>SVM</span><span>Random Forest</span>
+                <span>Android Accessibility API</span><span>ETL Pipeline</span><span>Power BI</span>
+              </div>
+            </div>
+            <div class="research-col">
+              <h4><i class="fas fa-user-graduate"></i> <span data-i18n="research-orient">Orientação</span></h4>
+              <p data-i18n="gd-orient">Prof. Dr. Wesley Pereira da Silva — FAESA Centro Universitário Espírito-Santense</p>
+            </div>
+          </div>
+          <div class="research-footer">
+            <a href="https://github.com/mikaellycardoso" target="_blank" class="btn-research">
+              <i class="fab fa-github"></i> <span data-i18n="btn-repo">Repositório</span>
+            </a>
+            <a href="http://lattes.cnpq.br/6340388262242435" target="_blank" class="btn-research btn-research-secondary">
+              <i class="fas fa-graduation-cap"></i> Lattes
+            </a>
+          </div>
+        </div>
+
+        <div class="publications-section">
+          <h3 data-i18n="tit-publications">Publicações</h3>
+          <div class="publications-empty">
+            <i class="fas fa-file-alt"></i>
+            <p data-i18n="publications-empty">Artigo científico em desenvolvimento — previsão de publicação: 2027.</p>
+            <p class="publications-sub" data-i18n="publications-sub">Os resultados da Guardiã Digital serão submetidos a conferência nacional de Sistemas de Informação (SBSI).</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <section id="trajetoria" class="secao-conteudo">
       <div class="trajetoria-larga">
         <div class="editorial-header header-rosa">
@@ -131,18 +192,17 @@
           <div class="trajetoria-texto conteudo-principal">
             <div class="baloes-wrapper" style="margin-top: 0;">
               <div class="balao-texto">
-                <h3 data-i18n="sobre-tit">Do Código à Inteligência de Negócios</h3>
-                <p data-i18n="sobre-desc">Minha jornada na tecnologia começou na base da engenharia de software, estruturando códigos e aplicando metodologias ágeis. No entanto, rapidamente descobri que minha verdadeira paixão não é apenas construir o sistema, mas extrair a inteligência que os dados gerados por ele podem revelar. Hoje, atuo na interseção entre Programação e Data Analytics. Utilizo minha base em desenvolvimento para entender a arquitetura da informação e aplico Business Intelligence (BI), visualização de dados e conceitos de Inteligência Artificial para transformar dados brutos em histórias claras, painéis interativos e decisões de negócios com impacto financeiro e social real.</p>
+                <h3 data-i18n="sobre-tit">Da Engenharia à Pesquisa com Propósito</h3>
+                <p data-i18n="sobre-desc">Minha trajetória começou na engenharia de software, mas foi ao observar minha mãe de 60 anos lutando com apps minimalistas que encontrei meu verdadeiro problema a resolver. Hoje sou pesquisadora em formação na interseção entre Inteligência Artificial, acessibilidade digital e saúde pública — desenvolvendo soluções que colocam pessoas reais no centro da tecnologia. Meu objetivo de longo prazo é transcender a tecnologia corporativa e usar Ciência de Dados e IA para gerar impacto estrutural em políticas públicas e saúde digital.</p>
               </div>
             </div>
 
             <div class="perfil-resumo" style="margin-top: 3rem;">
               <h3 data-i18n="tit-resumo"><i class="fas fa-id-card"></i> Meu Perfil em Resumo</h3>
               <ul>
-                <li><strong data-i18n="lbl-cargo">Cargo atual:</strong> <span data-i18n="txt-cargo">Estagiária de Desenvolvimento de Software - TRE-ES.</span></li>
-                <li><strong data-i18n="lbl-formacao">Formação:</strong> <span data-i18n="txt-formacao">Sistemas de Informação (FAESA - Previsão de formação em 06/2028).</span></li>
-                <li><strong data-i18n="lbl-projetos">Tipo de projetos que desenvolvo:</strong> <span data-i18n="txt-projetos">Dashboards executivos e modelagem de BI, aplicações mobile completas (cross-platform), e arquitetura de produtos digitais integrados com IA para soluções de impacto social e eficiência econômica.</span></li>
-                <li><strong data-i18n="lbl-diferencial">Diferencial profissional:</strong> <span data-i18n="txt-diferencial">Visão macroeconômica e de negócios (Storytelling com dados); UX Design afiado para criar visualizações intuitivas; e facilidade de comunicação e adaptação multicultural (Inglês e Espanhol práticos, com vivência em voluntariado internacional).</span></li>
+                <li><strong data-i18n="lbl-cargo">Cargo atual:</strong> <span data-i18n="txt-cargo">Estagiária de Desenvolvimento de Software — TRE-ES (Tribunal Regional Eleitoral do ES).</span></li>
+                <li><strong data-i18n="lbl-formacao">Formação:</strong> <span data-i18n="txt-formacao">Sistemas de Informação — FAESA (Previsão: julho de 2028). Pesquisadora de IC sob orientação do Prof. Dr. Wesley Pereira da Silva.</span></li>
+                <li><strong data-i18n="lbl-projetos">Pesquisa:</strong> <span data-i18n="txt-projetos">Machine Learning aplicado à detecção de frustração em usuários idosos (Guardiã Digital). Análise de dados ambientais e urbanos (EcoAtlas). IA para triagem em saúde mental (SafeMind).</span></li>
               </ul>
             </div>
 
@@ -157,15 +217,20 @@
                   <div class="bolinha"></div>
                 </div>
                 
-                <div class="timeline-ponto ativo" id="ponto-2025" onclick="mudarAno('2025')">
-                  <span class="ano-label" data-i18n="tl-2025-lbl">2025 - Atual</span>
+                <div class="timeline-ponto" id="ponto-2025" onclick="mudarAno('2025')">
+                  <span class="ano-label">2025</span>
+                  <div class="bolinha"></div>
+                </div>
+
+                <div class="timeline-ponto ativo" id="ponto-2026" onclick="mudarAno('2026')">
+                  <span class="ano-label" data-i18n="tl-2026-lbl">2026 - Atual</span>
                   <div class="bolinha"></div>
                 </div>
               </div>
 
               <div class="timeline-conteudo" style="background: rgba(244, 241, 234, 0.5);">
-                <h4 id="tl-titulo">2025 – Atual | A Prática e a Transição</h4>
-                <p id="tl-texto">Início do estágio em Desenvolvimento de Software no TRE-ES, lidando com código em produção e metodologias ágeis em larga escala. Simultaneamente, consolidei minha transição para o universo dos dados, desenvolvendo arquiteturas independentes e projetos de Business Intelligence e IA voltados para a resolução de problemas reais.</p>
+                <h4 id="tl-titulo">2026 – Atual |  A Início na área de Pesquisa</h4>
+                <p id="tl-texto">Início da Iniciação Científica — A Guardiã Digital, sob orientação do Prof. Dr. Wesley Pereira da Silva. Foco em Machine Learning aplicado à acessibilidade digital de idosos.</p>
               </div>
             </div>
             
@@ -206,6 +271,9 @@
               </a>
               <a href="https://github.com/mikaellycardoso" target="_blank" title="GitHub">
                   <i class="fab fa-github"></i>
+              </a>
+              <a href="http://lattes.cnpq.br/6340388262242435" target="_blank" title="Currículo Lattes">
+                  <i class="fas fa-graduation-cap"></i>
               </a>
               <a href="mailto:mikaellycardosodev@gmail.com" title="E-mail">
                   <i class="fas fa-envelope"></i>
@@ -317,8 +385,7 @@
             linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
             email: 'mailto:mikaellycardosodev@gmail.com'
         },
-        // Adicione este bloco dentro de dadosProjetos:
-'ilhas-calor': {
+        'ilhas-calor': {
     titulo: { 
         pt: 'EcoAtlas: Inteligência de Dados Contra o Aquecimento Urbano', 
         en: 'EcoAtlas: Data Intelligence Against Urban Warming' 
@@ -368,7 +435,7 @@
         en: 'Power BI, DAX (Time Intelligence and Data Governance), Dimensional Modeling, and UI/UX Design (Bookmarks and Pop-ups).' 
     },
     fotos: [
-        'dashboards/painelcontratações.mp4', // Coloque seu vídeo em primeiro para ele rodar logo de cara!
+        'dashboards/painelcontratacões.mp4', // Coloque seu vídeo em primeiro para ele rodar logo de cara!
         'dashboards/painel1.png', 
         'dashboards/painel2.png'
     ], 
@@ -474,8 +541,8 @@
             'menu-projetos': 'Projetos',
             'menu-trajetoria': 'Trajetória',
             'saudacao': 'Olá, eu sou a <strong>Mikaelly!</strong>',
-            'cargo': 'Analista de Dados &<br class="quebra-notebook"> Desenvolvedora de Software',
-            'resumo': 'Do código à inteligência de negócios. Combinando a lógica do desenvolvimento de software com a análise de dados para gerar eficiência econômica e impacto social.',
+            'cargo': 'AI & ML Researcher<br> Accessibility & Social Impact',
+            'resumo': 'Pesquisadora em formação na interseção entre Inteligência Artificial, acessibilidade digital e saúde pública. Construindo soluções que colocam as pessoas no centro da tecnologia.',
             'tit-secao-projetos': 'Estudos de Caso/Projetos',
             'proj1-tit': 'SafeMind: IA & Saúde Mental',
             'proj1-desc': 'IA para triagem psicológica automatizada. Unindo engenharia de software e análise orientada a objetos para gerar impacto social no sistema de saúde.',
@@ -486,28 +553,44 @@
             'tag-ea': 'Engenharia de Analytics',
             'proj3-desc': 'Aplicativo B2C cross-platform com arquitetura escalável e banco de dados local. Centralizando logística, roteiros e economia offline para viajantes.',
             'tit-sobre-mim': 'Sobre Mim',
-            'sobre-tit': 'Do Código à Inteligência de Negócios',
-            'sobre-desc': 'Minha jornada na tecnologia começou na base da engenharia de software, estruturando códigos e aplicando metodologias ágeis. No entanto, rapidamente descobri que minha verdadeira paixão não é apenas construir o sistema, mas extrair a inteligência que os dados gerados por ele podem revelar. Hoje, atuo na interseção entre Programação e Data Analytics. Utilizo minha base em desenvolvimento para entender a arquitetura da informação e aplico Business Intelligence (BI), visualização de dados e conceitos de Inteligência Artificial para transformar dados brutos em histórias claras, painéis interativos e decisões de negócios com impacto financeiro e social real.',
+            'sobre-tit': 'Da Engenharia à Pesquisa com Propósito',
+            'sobre-desc': 'Minha trajetória começou na engenharia de software, mas foi ao observar minha mãe de 60 anos lutando com apps minimalistas que encontrei meu verdadeiro problema a resolver. Hoje sou pesquisadora em formação na interseção entre Inteligência Artificial, acessibilidade digital e saúde pública — desenvolvendo soluções que colocam pessoas reais no centro da tecnologia. Meu objetivo de longo prazo é transcender a tecnologia corporativa e usar Ciência de Dados e IA para gerar impacto estrutural em políticas públicas e saúde digital.',
             'tit-resumo': '<i class="fas fa-id-card"></i> Meu Perfil em Resumo',
             'lbl-cargo': 'Cargo atual:',
-            'txt-cargo': 'Estagiária de Desenvolvimento de Software - TRE-ES.',
+            'txt-cargo': 'Estagiária de Desenvolvimento de Software — TRE-ES (Tribunal Regional Eleitoral do ES).',
             'lbl-formacao': 'Formação:',
-            'txt-formacao': 'Sistemas de Informação (FAESA - Previsão de formação em 06/2028).',
-            'lbl-projetos': 'Tipo de projetos que desenvolvo:',
-            'txt-projetos': 'Dashboards executivos e modelagem de BI, aplicações mobile completas (cross-platform), e arquitetura de produtos digitais integrados com IA para soluções de impacto social e eficiência econômica.',
-            'lbl-diferencial': 'Diferencial profissional:',
-            'txt-diferencial': 'Visão macroeconômica e de negócios (Storytelling com dados); UX Design afiado para criar visualizações intuitivas; e facilidade de comunicação e adaptação multicultural (Inglês e Espanhol práticos, com vivência em voluntariado internacional).',
+            'txt-formacao': 'Sistemas de Informação — FAESA (Previsão: julho de 2028). Pesquisadora de IC sob orientação do Prof. Dr. Wesley Pereira da Silva.',
+            'lbl-projetos': 'Pesquisa:',
+            'txt-projetos': 'Machine Learning aplicado à detecção de frustração em usuários idosos (Guardiã Digital). Análise de dados ambientais e urbanos (EcoAtlas). IA para triagem em saúde mental (SafeMind).',
+            'lbl-diferencial': 'Objetivo:',
+            'txt-diferencial': 'Mestrado internacional Erasmus Mundus em Big Data Management & Analytics (2029). Doutorado em Políticas Públicas / Civic Tech. Docência universitária.',
             'tit-linha': '<i class="fas fa-route"></i> Linha do Tempo da Carreira',
-            'tl-2025-lbl': '2025 - Atual',
+            'tl-2025-lbl': '2025',
+            'tl-2026-lbl': '2026 - Atual',
             'tit-pilares': 'Minhas Ferramentas e Pilares',
             'cat-bancos': 'Linguagens & Bancos',
             'cat-bi': 'BI & Metodologias',
             'cat-soft': 'Diferenciais & Soft Skills',
-            'pilares-py': 'Python (Foco em Análise de Dados)',
+            'pilares-py': 'Python (Pandas, Scikit-learn, SciPy)',
             'pilares-pbi': 'Power BI e Modelagem de Dados',
             'pilares-idiomas': 'Inglês Avançado e Espanhol Avançado',
             'pilares-figma': 'Prototipagem de Produtos (Figma)',
-            'pilares-visao': 'Visão voltada para Economia e Impacto Social',
+            'pilares-visao': 'Pesquisa aplicada em Saúde Digital e Acessibilidade',
+            'menu-pesquisa': 'Pesquisa',
+            'tit-pesquisa': 'Iniciação Científica',
+            'badge-andamento': 'Em Andamento',
+            'gd-titulo': 'A Guardiã Digital',
+            'gd-subtitulo': 'Sistema de Machine Learning para Inclusão Digital de Idosos',
+            'research-problema': 'O Problema',
+            'gd-problema': 'O minimalismo excessivo nos aplicativos modernos exclui digitalmente milhões de idosos. Interfaces projetadas sem considerar as especificidades dessa faixa etária geram frustração invisível — e nenhum sistema atual detecta esse problema em tempo real.',
+            'research-solucao': 'A Solução',
+            'gd-solucao': 'Um agente inteligente integrado aos Serviços de Acessibilidade do Android que captura eventos de toque (coordenadas X/Y, latência, taxa de erro) e aplica algoritmos de classificação — SVM e Random Forest — para detectar padrões de frustração em tempo real, sem interação do usuário.',
+            'research-orient': 'Orientação',
+            'gd-orient': 'Prof. Dr. Wesley Pereira da Silva — FAESA Centro Universitário Espírito-Santense',
+            'btn-repo': 'Repositório',
+            'tit-publications': 'Publicações',
+            'publications-empty': 'Artigo científico em desenvolvimento — previsão de publicação: 2027.',
+            'publications-sub': 'Os resultados da Guardiã Digital serão submetidos a conferência nacional de Sistemas de Informação (SBSI).',
             'footer-txt': '&copy; 2026 Mikaelly Cardoso. Todos os direitos reservados.',
             'modal-prob': 'O Problema Real',
             'modal-sol': 'A Solução',
@@ -519,8 +602,8 @@
             'menu-projetos': 'Projects',
             'menu-trajetoria': 'Journey',
             'saudacao': 'Hi, I am <strong>Mikaelly!</strong>',
-            'cargo': 'Data Analyst &<br class="quebra-notebook"> Software Developer',
-            'resumo': 'From code to business intelligence. Combining software development logic with data analysis to generate economic efficiency and social impact.',
+            'cargo': 'AI & ML Researcher<br> Accessibility & Social Impact',
+            'resumo': 'A researcher in training at the intersection of artificial intelligence, digital accessibility, and public health. Developing solutions that put people at the center of technology.',
             'tit-secao-projetos': 'Case Studies & Projects',
             'proj1-tit': 'SafeMind: AI & Mental Health',
             'proj1-desc': 'AI for automated psychological screening. Bridging software engineering and object-oriented analysis to generate social impact in the healthcare system.',
@@ -531,28 +614,44 @@
             'tag-ea': 'Analytics Engineering',
             'proj3-desc': 'Cross-platform B2C app with scalable architecture and local database. Centralizing logistics, itineraries, and offline savings for travelers.',
             'tit-sobre-mim': 'About Me',
-            'sobre-tit': 'From Code to Business Intelligence',
-            'sobre-desc': 'My journey in technology started at the foundation of software engineering, structuring code and applying agile methodologies. However, I quickly discovered that my true passion isn\'t just building the system, but extracting the intelligence that the generated data can reveal. Today, I work at the intersection of Programming and Data Analytics. I use my development background to understand information architecture and apply Business Intelligence (BI), data visualization, and Artificial Intelligence concepts to transform raw data into clear stories, interactive dashboards, and business decisions with real financial and social impact.',
+            'sobre-tit': 'From Engineering to Purpose-Driven Research',
+            'sobre-desc': 'My career began in software engineering, but it was while watching my 60-year-old mother struggle with minimalist apps that I discovered the real problem I wanted to solve. Today, I am a researcher in training at the intersection of Artificial Intelligence, digital accessibility, and public health—developing solutions that put real people at the center of technology. My long-term goal is to move beyond corporate technology and use Data Science and AI to drive structural change in public policy and digital health.',
             'tit-resumo': '<i class="fas fa-id-card"></i> My Profile in Brief',
             'lbl-cargo': 'Current Role:',
-            'txt-cargo': 'Software Development Intern - TRE-ES.',
+            'txt-cargo': 'Software Development Intern — Regional Electoral Court of Espírito Santo (TRE-ES), a federal public institution.',
             'lbl-formacao': 'Education:',
-            'txt-formacao': 'Information Systems (FAESA - Expected graduation in 06/2028).',
-            'lbl-projetos': 'Type of projects I develop:',
-            'txt-projetos': 'Executive dashboards and BI modeling, full mobile applications (cross-platform), and digital product architecture integrated with AI for social impact and economic efficiency solutions.',
-            'lbl-diferencial': 'Professional Edge:',
-            'txt-diferencial': 'Macroeconomic and business vision (Data Storytelling); sharp UX Design for intuitive visualizations; and strong communication and multicultural adaptability (practical English and Spanish, with international volunteer experience).',
+            'txt-formacao': 'B.Sc. Computer Information Systems — FAESA (Expected: July 2028). Undergraduate researcher supervised by Prof. Dr. Wesley Pereira da Silva.',
+            'lbl-projetos': 'Research:',
+            'txt-projetos': 'Machine Learning applied to frustration detection in elderly users (The Digital Guardian). Environmental and urban data analysis (EcoAtlas). AI for mental health triage (SafeMind).',
+            'lbl-diferencial': 'Goal:',
+            'txt-diferencial': 'Erasmus Mundus Master\'s in Big Data Management & Analytics (2029). PhD in Public Policy / Civic Tech. University teaching.',
             'tit-linha': '<i class="fas fa-route"></i> Career Timeline',
-            'tl-2025-lbl': '2025 - Present',
+            'tl-2025-lbl': '2025',
+            'tl-2026-lbl': '2026 - Present',
             'tit-pilares': 'My Tools and Pillars',
             'cat-bancos': 'Languages & Databases',
             'cat-bi': 'BI & Methodologies',
             'cat-soft': 'Differentiators & Soft Skills',
-            'pilares-py': 'Python (Data Analysis Focus)',
+            'pilares-py': 'Python (Pandas, Scikit-learn, SciPy)',
             'pilares-pbi': 'Power BI and Data Modeling',
             'pilares-idiomas': 'Advanced English and Advanced Spanish',
             'pilares-figma': 'Product Prototyping (Figma)',
-            'pilares-visao': 'Vision focused on Economy and Social Impact',
+            'pilares-visao': 'Applied research in Digital Health and Accessibility',
+            'menu-pesquisa': 'Research',
+            'tit-pesquisa': 'Scientific Research',
+            'badge-andamento': 'In Progress',
+            'gd-titulo': 'The Digital Guardian',
+            'gd-subtitulo': 'Machine Learning System for Elderly Digital Inclusion',
+            'research-problema': 'The Problem',
+            'gd-problema': 'Excessive minimalism in modern apps digitally excludes millions of elderly users. Interfaces designed without considering the specificities of this age group generate invisible frustration — and no current system detects this problem in real time.',
+            'research-solucao': 'The Solution',
+            'gd-solucao': 'An intelligent agent integrated with Android Accessibility Services that captures touch event data (X/Y coordinates, latency, error rate) and applies classification algorithms — SVM and Random Forest — to detect frustration patterns in real time, without requiring user input.',
+            'research-orient': 'Supervisor',
+            'gd-orient': 'Prof. Dr. Wesley Pereira da Silva — FAESA Centro Universitário Espírito-Santense, Brazil',
+            'btn-repo': 'Repository',
+            'tit-publications': 'Publications',
+            'publications-empty': 'Scientific article under development — expected publication: 2027.',
+            'publications-sub': 'Results from The Digital Guardian will be submitted to a national Information Systems conference (SBSI).',
             'footer-txt': '&copy; 2026 Mikaelly Cardoso. All rights reserved.',
             'modal-prob': 'The Real Problem',
             'modal-sol': 'The Solution',
@@ -596,12 +695,19 @@
             }
         },
         '2025': {
-            titulo: { pt: '2025 – Atual | A Prática e a Transição', en: '2025 – Present | Practice and Transition' },
+            titulo: { pt: '2025 | A Prática e a Transição', en: '2025 | Practice and Transition' },
             texto: { 
                 pt: 'Início do estágio em Desenvolvimento de Software no TRE-ES, lidando com código em produção e metodologias ágeis em larga escala. Simultaneamente, consolidei minha transição para o universo dos dados, desenvolvendo arquiteturas independentes e projetos de Business Intelligence e IA voltados para a resolução de problemas reais.', 
                 en: 'Started the Software Development internship at TRE-ES, dealing with production code and large-scale agile methodologies. Simultaneously, I consolidated my transition to the data universe, developing independent architectures and Business Intelligence and AI projects aimed at solving real-world problems.' 
             }
-        }
+        },
+        '2026': {
+            titulo: { pt: '2026 – Atual | O Início na Pesquisa', en: '2026 – Present | The Research Begins' },
+            texto: { 
+                pt: 'Início da Iniciação Científica — A Guardiã Digital, sob orientação do Prof. Dr. Wesley Pereira da Silva. Foco em Machine Learning aplicado à acessibilidade digital de idosos.', 
+                en: 'Start of the Research Project — “The Digital Guardian,” under the guidance of Prof. Dr. Wesley Pereira da Silva. Focus on machine learning applied to digital accessibility for the elderly.' 
+            }
+          }
       };
 
       function mudarAno(anoClicado) {
@@ -744,6 +850,7 @@
       document.addEventListener("DOMContentLoaded", () => {
           const btnDev = document.querySelector('.categoria-box.active');
           filtrarProjetos('dev', btnDev);
+          mudarAno('2026');
       });
     </script>
   </body>

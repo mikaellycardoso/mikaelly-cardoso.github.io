@@ -408,3 +408,165 @@ footer { text-align: center; padding: 2rem; background-color: var(--cor-primaria
 #trajetoria .editorial-header {
     margin-bottom: 4rem;
 }
+/* ============================================
+   SEÇÃO PESQUISA — classes novas apenas
+   Não modifica nenhuma classe existente
+   ============================================ */
+
+.secao-pesquisa {
+    background-color: rgba(240, 237, 230, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding-bottom: 60px;
+}
+
+.research-card-principal {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(96, 108, 56, 0.2);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.research-badge {
+    display: inline-block;
+    background: var(--cor-primaria);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+}
+
+.research-header h3 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--cor-texto);
+    margin-bottom: 0.4rem;
+}
+
+.research-subtitulo {
+    color: var(--cor-primaria);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.research-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.research-col h4 {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #bfa05e;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.research-col h4 i { margin-right: 0.4rem; }
+
+.research-col p {
+    font-size: 0.92rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.research-tags span {
+    background: rgba(96, 108, 56, 0.1);
+    color: var(--cor-primaria);
+    border: 1px solid rgba(96, 108, 56, 0.25);
+    border-radius: 20px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 0.25rem 0.8rem;
+}
+
+.research-footer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.btn-research {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--cor-primaria);
+    color: white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-research:hover {
+    background: var(--cor-texto);
+    transform: translateY(-2px);
+}
+
+.btn-research-secondary {
+    background: transparent !important;
+    border: 1.5px solid var(--cor-primaria);
+    color: var(--cor-primaria) !important;
+}
+
+.btn-research-secondary:hover {
+    background: var(--cor-primaria) !important;
+    color: white !important;
+}
+
+/* Publications */
+.publications-section { margin-top: 1rem; }
+
+.publications-section h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--cor-texto);
+    margin-bottom: 1.2rem;
+}
+
+.publications-empty {
+    border: 2px dashed rgba(96, 108, 56, 0.3);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    color: #888;
+}
+
+.publications-empty i {
+    font-size: 2rem;
+    color: rgba(96, 108, 56, 0.35);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.publications-empty p { font-size: 0.95rem; margin-bottom: 0.4rem; }
+.publications-sub { font-size: 0.82rem !important; color: #aaa !important; }
+
+/* Research section mobile — só afeta as novas classes */
+@media (max-width: 768px) {
+    .research-body { grid-template-columns: 1fr; gap: 1.2rem; }
+    .research-card-principal { padding: 1.5rem; }
+    .research-footer { flex-direction: column; }
+    .btn-research { justify-content: center; }
+}
