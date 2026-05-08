@@ -329,30 +329,58 @@
             linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
             email: 'mailto:mikaellycardosodev@gmail.com'
         },
-        'gov-impacto': {
+
+        'roadkill-br': {
             titulo: { 
-                pt: 'Governança & Impacto: Mini DW de Indicadores Públicos', 
-                en: 'Governance & Impact: Mini DW of Public Indicators' 
+                pt: 'RoadKill BR: Análise Geoespacial de Atropelamentos de Fauna Silvestre', 
+                en: 'RoadKill BR: Geospatial Analysis of Wildlife Roadkill Hotspots' 
             },
             status: { pt: 'Em Desenvolvimento', en: 'In Development' },
             problema: { 
-                pt: 'Dados abertos governamentais (como os do IBGE ou do Portal da Transparência) são minas de ouro para entender a economia e a sociedade, mas geralmente são desestruturados, massivos e isolados. Sem um tratamento adequado, torna-se quase impossível cruzar informações financeiras (orçamentos) com indicadores de impacto social (educação, saúde e desenvolvimento), dificultando a auditoria e a tomada de decisão estratégica por parte de gestores e empresas focadas em ESG.', 
-                en: 'Open government data (such as census data or transparency portals) are gold mines for understanding the economy and society, but they are generally unstructured, massive, and isolated. Without proper treatment, it becomes almost impossible to cross financial information (budgets) with social impact indicators (education, health, and development), hindering auditing and strategic decision-making by managers and ESG-focused companies.' 
+                pt: 'O Brasil registra cerca de 475 milhões de animais silvestres atropelados por ano em rodovias — o maior número do mundo. Os dados existem, mas vivem fragmentados em sistemas estaduais e bases do IBAMA sem nunca serem cruzados. Sem uma análise espacial consolidada, o poder público não sabe onde concentrar recursos para passagens de fauna e medidas de mitigação. O verdadeiro custo ambiental das rodovias brasileiras permanece invisível.', 
+                en: 'Brazil records approximately 475 million wild animals killed on roads per year — the highest number in the world. The data exists, but lives fragmented in state systems and IBAMA databases that are never crossed. Without consolidated spatial analysis, public authorities do not know where to concentrate resources for wildlife crossings and mitigation measures. The true environmental cost of Brazilian highways remains invisible.' 
             },
             solucao: { 
-                pt: 'Desenvolvimento de um pipeline de dados de ponta a ponta focado em Engenharia de Analytics. O projeto realiza a extração automatizada de dados brutos de fontes públicas, transformando-os em um Mini Data Warehouse estruturado. A partir dessa base governada e modelada, foi construído um Dashboard Executivo que cruza o volume de investimentos financeiros com o retorno em desenvolvimento social daquela região, oferecendo métricas prontas para análise e auditoria visual.', 
-                en: 'Development of an end-to-end data pipeline focused on Analytics Engineering. The project performs automated extraction of raw data from public sources, transforming them into a structured Mini Data Warehouse. From this governed and modeled base, an Executive Dashboard was built that crosses the volume of financial investments with the return in social development of that region, offering ready-to-use metrics for visual analysis and auditing.' 
+                pt: 'Um projeto de Data Science geoespacial ponta a ponta que cruza dados de atropelamentos do Sistema Urubu (CBEE/UFPR) com shapefiles de rodovias federais (DNIT) e cobertura vegetal (MapBiomas). A análise aplica Kernel Density Estimation (KDE) para identificar hotspots de risco e testa a correlação entre proximidade de áreas de vegetação nativa e densidade de atropelamentos. O resultado é um mapa interativo de hotspots e um ranking de trechos prioritários para intervenção.', 
+                en: 'An end-to-end geospatial Data Science project that crosses roadkill data from the Urubu System (CBEE/UFPR) with federal highway shapefiles (DNIT) and vegetation cover (MapBiomas). The analysis applies Kernel Density Estimation (KDE) to identify risk hotspots and tests the correlation between proximity to native vegetation areas and roadkill density. The result is an interactive hotspot map and a ranking of priority stretches for intervention.' 
             },
             papel: { 
-                pt: 'Atuei como Analytics Engineer, arquitetando todo o fluxo de ponta a ponta. Meu foco foi garantir a governança estrutural através da modelagem dimensional (Star Schema) com dbt e SQL, transformando bases governamentais caóticas em tabelas prontas para consumo. Além da orquestração em Python, apliquei minha visão macroeconômica para traduzir orçamentos cruzados em um storytelling visual de alto impacto no Power BI.', 
-                en: 'I acted as an Analytics Engineer, architecting the entire end-to-end flow. My focus was to ensure structural governance through dimensional modeling (Star Schema) with dbt and SQL, transforming chaotic government databases into ready-to-consume tables. Beyond orchestration in Python, I applied my macroeconomic vision to translate cross-referenced budgets into high-impact visual storytelling in Power BI.' 
+                pt: 'Atuando como Data Scientist e pesquisadora de políticas ambientais, meu foco é construir uma narrativa analítica completa — do pipeline de dados à recomendação de políticas públicas. O desafio central é o cruzamento de bases com granularidades distintas (registros pontuais de atropelamentos vs. dados lineares de rodovias vs. polígonos de vegetação) e a aplicação de KDE para transformar pontos dispersos em superfícies de risco interpretáveis.', 
+                en: 'Acting as Data Scientist and environmental policy researcher, my focus is building a complete analytical narrative — from the data pipeline to public policy recommendations. The central challenge is crossing databases with distinct granularities (point records of roadkills vs. linear highway data vs. vegetation polygons) and applying KDE to transform scattered points into interpretable risk surfaces.' 
             },
             tecnologia: { 
-                pt: 'Python (Extração e Limpeza via APIs/Arquivos), DuckDB / SQLite (Armazenamento local rápido), dbt + SQL (Modelagem de dados e transformações) e Power BI (Visualização Executiva e DAX).', 
-                en: 'Python (Extraction & Cleaning via APIs/Files), DuckDB / SQLite (Fast local storage), dbt + SQL (Data modeling and transformations), and Power BI (Executive Visualization and DAX).' 
+                pt: 'Python (Pandas, GeoPandas, SciPy, Folium), Kernel Density Estimation (KDE), Sistema Urubu / CBEE, DNIT Open Data, MapBiomas, Power BI e Git/GitHub.', 
+                en: 'Python (Pandas, GeoPandas, SciPy, Folium), Kernel Density Estimation (KDE), Urubu System / CBEE, DNIT Open Data, MapBiomas, Power BI, and Git/GitHub.' 
             },
-            fotos: [], 
-            github: 'https://github.com/mikaellycardoso/mini-dw-gov',
+            fotos: [],
+            github: 'https://github.com/mikaellycardoso/roadkill-br',
+            linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
+            email: 'mailto:mikaellycardosodev@gmail.com'
+        },
+        'reentry-br': {
+            titulo: { 
+                pt: 'ReEntry BR: Fatores Preditivos de Reintegração Laboral de Ex-Detentos', 
+                en: 'ReEntry BR: Predictive Factors of Ex-Offender Labor Reintegration' 
+            },
+            status: { pt: 'Em Desenvolvimento', en: 'In Development' },
+            problema: { 
+                pt: 'Cerca de 70% dos ex-detentos brasileiros reincide em até 5 anos. A literatura é clara: emprego formal é o principal fator protetor contra reincidência. Mas o Brasil não possui um sistema que rastreie o que acontece com uma pessoa após sair do sistema prisional. Gestores públicos tomam decisões de política penitenciária sem saber quais intervenções realmente funcionam — e os dados existem, mas nunca foram cruzados de forma sistemática.', 
+                en: 'Around 70% of Brazilian ex-offenders reoffend within 5 years. The literature is clear: formal employment is the main protective factor against recidivism. But Brazil has no system that tracks what happens to a person after leaving the prison system. Public managers make penitentiary policy decisions without knowing which interventions actually work — and the data exists, but has never been systematically crossed.' 
+            },
+            solucao: { 
+                pt: 'Um projeto de Data Science que constrói uma variável proxy de reintegração laboral — inexistente nos dados públicos brasileiros — cruzando bases do DEPEN, RAIS, CAGED, IBGE e CNJ por município como unidade de análise. A partir dessa variável, modelos de Random Forest e regressão múltipla identificam quais fatores socioeconômicos e institucionais predizem com maior precisão a reintegração formal, gerando um ranking de municípios e recomendações de política pública baseadas em evidência.', 
+                en: 'A Data Science project that builds a labor reintegration proxy variable — nonexistent in Brazilian public data — by crossing DEPEN, RAIS, CAGED, IBGE, and CNJ databases using municipalities as the unit of analysis. From this variable, Random Forest models and multiple regression identify which socioeconomic and institutional factors most accurately predict formal reintegration, generating a municipal ranking and evidence-based public policy recommendations.' 
+            },
+            papel: { 
+                pt: 'Como Data Scientist e pesquisadora de políticas públicas, o principal desafio metodológico é construir uma variável que não existe a partir de dados que existem — combinando indicadores de emprego formal, reincidência e acesso a programas de ressocialização em uma métrica coesa por município. Essa contribuição metodológica original é o coração do projeto e seu diferencial científico.', 
+                en: 'As a Data Scientist and public policy researcher, the main methodological challenge is building a variable that does not exist from data that does — combining formal employment indicators, recidivism rates, and access to rehabilitation programs into a cohesive municipal metric. This original methodological contribution is the heart of the project and its scientific differentiator.' 
+            },
+            tecnologia: { 
+                pt: 'Python (Pandas, GeoPandas, Statsmodels, Scikit-learn), DEPEN, RAIS/CAGED, IBGE, CNJ, Random Forest, Regressão Múltipla, Folium, Power BI e Git/GitHub.', 
+                en: 'Python (Pandas, GeoPandas, Statsmodels, Scikit-learn), DEPEN, RAIS/CAGED, IBGE, CNJ, Random Forest, Multiple Regression, Folium, Power BI, and Git/GitHub.' 
+            },
+            fotos: [],
+            github: 'https://github.com/mikaellycardoso/reentry-br',
             linkedin: 'https://linkedin.com/in/mikaelly-cardoso',
             email: 'mailto:mikaellycardosodev@gmail.com'
         },
@@ -548,8 +576,10 @@
             'proj1-desc': 'IA para triagem psicológica automatizada. Unindo engenharia de software e análise orientada a objetos para gerar impacto social no sistema de saúde.',
             'tag-es': 'Engenharia de Software',
             'tag-is': 'Impacto Social',
-            'proj2-tit': 'Mini Data Warehouse: Governança & Impacto',
-            'proj2-desc': 'Pipeline ETL de ponta a ponta e modelagem de métricas públicas. Cruzando dados financeiros e indicadores sociais para decisões estratégicas.',
+            'roadkill-tit': 'RoadKill BR: Hotspots de Fauna em Rodovias',
+            'roadkill-desc': 'Análise geoespacial de atropelamentos de fauna silvestre em rodovias federais — identificando hotspots para embasar políticas de mitigação.',
+            'reentry-tit': 'ReEntry BR: Reintegração Laboral de Ex-Detentos',
+            'reentry-desc': 'Análise preditiva dos fatores que determinam a reintegração formal de ex-detentos ao mercado de trabalho nos municípios brasileiros.',
             'tag-ea': 'Engenharia de Analytics',
             'proj3-desc': 'Aplicativo B2C cross-platform com arquitetura escalável e banco de dados local. Centralizando logística, roteiros e economia offline para viajantes.',
             'tit-sobre-mim': 'Sobre Mim',
@@ -609,8 +639,10 @@
             'proj1-desc': 'AI for automated psychological screening. Bridging software engineering and object-oriented analysis to generate social impact in the healthcare system.',
             'tag-es': 'Software Engineering',
             'tag-is': 'Social Impact',
-            'proj2-tit': 'Mini Data Warehouse: Governance & Impact',
-            'proj2-desc': 'End-to-end ETL pipeline and public metrics modeling. Crossing financial data and social indicators for strategic decisions.',
+            'roadkill-tit': 'RoadKill BR: Wildlife Roadkill Hotspot Analysis',
+            'roadkill-desc': 'Geospatial analysis of wildlife roadkill in Brazilian federal highways — identifying hotspots to support mitigation policies.',
+            'reentry-tit': 'ReEntry BR: Ex-Offender Labor Reintegration',
+            'reentry-desc': 'Predictive analysis of factors determining formal labor reintegration of ex-offenders in Brazilian municipalities.',
             'tag-ea': 'Analytics Engineering',
             'proj3-desc': 'Cross-platform B2C app with scalable architecture and local database. Centralizing logistics, itineraries, and offline savings for travelers.',
             'tit-sobre-mim': 'About Me',
@@ -777,13 +809,23 @@
     }
 },
     {
-              id: 'gov-impacto',
+              id: 'roadkill-br',
               categoria: 'dados',
-              img: 'gov-impacto/banner.jpg',
-              titulo: { pt: 'Mini DW: Governança & Impacto', en: 'Mini DW: Governance & Impact' },
+              img: 'rk.jpg',
+              titulo: { pt: 'RoadKill BR: Hotspots de Fauna em Rodovias', en: 'RoadKill BR: Wildlife Roadkill Hotspot Analysis' },
               desc: {
-                  pt: 'Pipeline ETL de ponta a ponta e modelagem de métricas públicas. Cruzando dados financeiros e indicadores sociais para decisões estratégicas.',
-                  en: 'End-to-end ETL pipeline and public metrics modeling. Crossing financial data and social indicators for strategic decisions.'
+                  pt: 'Análise geoespacial de atropelamentos de fauna silvestre em rodovias federais — identificando hotspots para embasar políticas de mitigação.',
+                  en: 'Geospatial analysis of wildlife roadkill in Brazilian federal highways — identifying hotspots to support mitigation policies.'
+              }
+          },
+          {
+              id: 'reentry-br',
+              categoria: 'dados',
+              img: 'reentry.png',
+              titulo: { pt: 'ReEntry BR: Reintegração Laboral de Ex-Detentos', en: 'ReEntry BR: Ex-Offender Labor Reintegration' },
+              desc: {
+                  pt: 'Análise preditiva dos fatores que determinam a reintegração formal de ex-detentos ao mercado de trabalho nos municípios brasileiros.',
+                  en: 'Predictive analysis of factors determining formal labor reintegration of ex-offenders in Brazilian municipalities.'
               }
           },
           
